@@ -1,0 +1,1 @@
+# linkzat.github.io
