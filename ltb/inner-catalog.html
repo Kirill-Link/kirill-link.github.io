@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.min.css?v222">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <!-- Favicons -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5"> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <title>catalog-inner</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    
+</head>
+<body>
+	
+	<svg style="display: none;">
+	    <symbol id="telegram" viewbox="0 0 548.358 548.358">
+	        <g></g>
+	    </symbol>
+	</svg>
+
+	<header class="header">
+	    <div class="container">
+	        <div class="header__items">
+	            <div class="header__item">
+	                <div class="header__menu">
+	
+	                    <nav class="menu__items">
+	                        <div class="nav__burger">
+	                            <div id="menu-toggle">
+	                                <div id="hamburger">
+	                                  <span></span>
+	                                  <span></span>
+	                                  <span></span>
+	                                </div>
+	                                <div id="cross">
+	                                  <span></span>
+	                                  <span></span>
+	                                </div>
+	                              </div>
+	                        </div>
+	                        <div class="navigation">
+	                            <div class="navigation__title">Меню</div>
+	                            <ul class="menu">
+	                                <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+	                                <li class="menu__item">
+	                                    <a class="menu__link" href="#">Каталог</a>
+	                                    <ul>
+	                                        <li><a href="catalog.html">Каталог</a></li>
+	                                        <li><a>Рубашки</a></li>
+	                                        <li><a>Шорты</a></li>
+	                                        <li><a>Шорты</a></li>
+	                                    </ul>
+	                                </li>
+	                                <li class="menu__item"><a class="menu__link" href="faq.html">FAQ</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="gift.html">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="delivery.html">доставка</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="contact.html">Контакты</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="#">Кабинет</a>
+	                                    <ul>
+	                                        <li><a href="account.html">Регистрация</a></li>
+	                                        <li><a href="secseful.html">Подтверждение</a></li>
+	                                        <li><a href="user-profil.html">Личный кабинет</a></li>
+	                                        <li><a href="red-user-profil.html">Личные кабинет редактирование</a></li>
+	                                        <li><a href="add-adress.html">Добавление адресса</a></li>
+	                                    </ul>
+	                                </li>
+	                                <li class="menu__item"><a class="menu__link" href="favorite.html">Избранное</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="order.html">Заказ</a></li>
+	
+	                            </ul>
+	                            <div class="navigaton__socials">
+	                                <div class="navigaton__socials__item"><a href="#"><img src="assets/img/social/telega.png"></a></div>
+	                                <div class="navigaton__socials__item"><a href="#"><img src="assets/img/social/inst.png"></a></div>
+	                                <div class="navigaton__socials__item"><a href="#"><img src="assets/img/social/vk.png"></a></div>
+	                            </div>
+	                        </div>
+	                    </nav>
+	                </div>
+	            </div>
+	            <div class="header__item">
+	                <div class="header__logo">
+	                    <a class="logo__items"  href="index.html">
+	                        <img src="assets/img/header/logo.png">
+	                    </a>
+	                </div>
+	            </div>
+	            <div class="header__item">
+	                <div class="header__links">
+	                    <a class="header__link" href="search.html">
+	                        <img src="assets/img/header/user.svg">
+	                    </a>
+	                    <a class="header__link" href="search.html">
+	                        <img src="assets/img/header/search.svg">
+	                    </a>
+	                    <a class="header__link" href="basket.html">
+	                        <img src="assets/img/header/market.svg">
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+	<div id="circle" class="circle-cursor circle-cursor--inner" ></div>	<main>
+		<!-- Content -->
+		
+		
+		<div class="container">
+		  <div class="product__item">
+		        <div class="product__info">
+		            <div class="product__title">jeans loretta </div>
+		            <div class="product__price">5.990 Р</div>
+		            <div class="product__subinfo">Хлопковые широкие джинсы с высокой посадкой. Длина модели соответствует длине 32</div>
+		            <div class="product__colors">
+		                <div class="color__title">цвет</div>
+		                <div class="catalog__colors">
+		                    <span class="catalog__color catalog__color-search catalog__color-black"></span>
+		                    <span class="catalog__color catalog__color-search catalog__color-white"></span>
+		                    <span class="catalog__color catalog__color-search catalog__color-blue"></span>
+		                </div>
+		            </div>
+		            <div class="product__sizes">
+		                <div class="size__title">размер</div>
+		                <div class="size__items">
+		                    <span class="size__item">xs</span>
+		                    <span class="size__item">s</span>
+		                    <span class="size__item">m</span>
+		                    <span class="size__item">l</span>
+		                    <span class="size__item">xl</span>
+		                </div>
+		            </div>
+		            <a href="#" type="button" class="mobile__size" data-toggle="modal" data-target="#selecSize">выберите размер</a>
+		
+		            <div class="product__button">
+		
+		                <a href="#" type="button" class="product__link" data-toggle="modal" data-target="#addCart">в корзину</a>
+		
+		            </div>
+		            <div class="product__desc">
+		                <div class="desc__item">состав</div>
+		                <div class="desc__item">доставка и возврат</div>
+		                <div class="desc__item">поделиться</div>
+		            </div>
+		            <div class="mobile__desc">
+		
+		              <div class="mobile__desc__item">
+		                <div class="mobile__desc__title">Состав</div>
+		                <div class="mobile__desc__sostav">35% полиэстр, 31% вискоза, 25% лен, 9% коттон</div>
+		                <div class="mobile__desc__color">
+		                  <div class="mobile__desc__title mobile__desc__title-color">Цвет</div>
+		                  <div class="catalog__colors"> 
+		                    <span class="catalog__color catalog__color-search catalog__color-black"></span>
+		                    <span class="catalog__color catalog__color-search catalog__color-white"></span>
+		                    <span class="catalog__color catalog__color-search catalog__color-blue"></span>
+		                  </div>
+		                </div>
+		              </div>
+		
+		              <div class="mobile__desc__item">
+		                <div class="mobile__desc__title mobile__desc__title-made">сделано в турции</div>
+		              </div>
+		
+		
+		
+		            </div>
+		        </div>
+		        
+		        <div class="product__gallery">
+		          <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper first__product-swipe">
+		            <div class="swiper-wrapper first__product-wrapper">
+		              <div class="swiper-slide first__product-slide">
+		                <img src="assets/img/catalog/inner/1.png" />
+		              </div>
+		              <div class="swiper-slide first__product-slide">
+		                <img src="assets/img/catalog/1.png" />
+		              </div>
+		              <div class="swiper-slide first__product-slide">
+		                <img src="assets/img/catalog/inner/1.png" />
+		              </div>
+		              <div class="swiper-slide first__product-slide">
+		                <img src="assets/img/catalog/1.png" />
+		              </div>
+		              <div class="swiper-slide first__product-slide">
+		                <img src="assets/img/catalog/inner/1.png" />
+		              </div>
+		              <div class="swiper-slide first__product-slide">
+		                <img src="assets/img/catalog/1.png" />
+		              </div>
+		            </div>
+		
+		          </div>
+		          <div thumbsSlider="" class="swiper products-swipe">
+		            <div class="swiper-wrapper products-swipe-wrapper">
+		              <div class="swiper-slide products-swipe-slide">
+		                <img src="assets/img/catalog/inner/1.png"" />
+		              </div>
+		              <div class="swiper-slide products-swipe-slide">
+		                <img src="assets/img/catalog/1.png" />
+		              </div>
+		              <div class="swiper-slide products-swipe-slide">
+		                <img src="assets/img/catalog/inner/1.png"" />
+		              </div>
+		              <div class="swiper-slide products-swipe-slide">
+		                <img src="assets/img/catalog/1.png" />
+		              </div>
+		              <div class="swiper-slide products-swipe-slide">
+		                <img src="assets/img/catalog/inner/1.png"" />
+		              </div>
+		              <div class="swiper-slide products-swipe-slide">
+		                <img src="assets/img/catalog/1.png" />
+		              </div>
+		            </div>
+		          </div>
+		          <div class="swiper-pagination"></div>
+		
+		        </div>
+		    </div>
+		
+		    <div class="additional__title">дополните образ</div>
+		
+		    <div class="catalog__item catalog__item-product">
+		      <div class="catalog__products">
+		          <div class="catalog__product ">
+		              <a href="inner-catalog.html" class="catalog__product__link">
+		                  <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                  <div class="catalog__title">Loretta jeans</div>
+		                  <div class="catalog__info">
+		                      <div class="catalog__price">10 000 руб</div>
+		                      <div class="catalog__colors">
+		                          <span class="catalog__color catalog__color-black"></span>
+		                          <span class="catalog__color catalog__color-white"></span>
+		                          <span class="catalog__color catalog__color-blue"></span>
+		                      </div>
+		                  </div>
+		              </a>
+		          </div>
+		          <div class="catalog__product">
+		              <a href="inner-catalog.html" class="catalog__product__link">
+		                  <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                  <div class="catalog__title">Loretta jeans</div>
+		                  <div class="catalog__info">
+		                      <div class="catalog__price">10 000 руб</div>
+		                      <div class="catalog__colors">
+		                          <span class="catalog__color catalog__color-black"></span>
+		                          <span class="catalog__color catalog__color-white"></span>
+		                          <span class="catalog__color catalog__color-blue"></span>
+		                      </div>
+		                  </div>
+		              </a>
+		          </div>
+		          <div class="catalog__product">
+		              <a href="inner-catalog.html" class="catalog__product__link">
+		                  <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                  <div class="catalog__title">Loretta jeans</div>
+		                  <div class="catalog__info">
+		                      <div class="catalog__price">10 000 руб</div>
+		                      <div class="catalog__colors">
+		                          <span class="catalog__color catalog__color-black"></span>
+		                          <span class="catalog__color catalog__color-white"></span>
+		                          <span class="catalog__color catalog__color-blue"></span>
+		                      </div>
+		                  </div>
+		              </a>
+		          </div>
+		          <div class="catalog__product">
+		              <a href="inner-catalog.html" class="catalog__product__link">
+		                  <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                  <div class="catalog__title">Loretta jeans</div>
+		                  <div class="catalog__info">
+		                      <div class="catalog__price">10 000 руб</div>
+		                      <div class="catalog__colors">
+		                          <span class="catalog__color catalog__color-black"></span>
+		                          <span class="catalog__color catalog__color-white"></span>
+		                          <span class="catalog__color catalog__color-blue"></span>
+		                      </div>
+		                  </div>
+		              </a>
+		          </div>
+		          <div class="catalog__product">
+		              <a href="inner-catalog.html" class="catalog__product__link">
+		                  <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                  <div class="catalog__title">Loretta jeans</div>
+		                  <div class="catalog__info">
+		                      <div class="catalog__price">10 000 руб</div>
+		                      <div class="catalog__colors">
+		                          <span class="catalog__color catalog__color-black"></span>
+		                          <span class="catalog__color catalog__color-white"></span>
+		                          <span class="catalog__color catalog__color-blue"></span>
+		                      </div>
+		                  </div>
+		              </a>
+		          </div>
+		          <div class="catalog__product">
+		              <a href="inner-catalog.html" class="catalog__product__link">
+		                  <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                  <div class="catalog__title">Loretta jeans</div>
+		                  <div class="catalog__info">
+		                      <div class="catalog__price">10 000 руб</div>
+		                      <div class="catalog__colors">
+		                          <span class="catalog__color catalog__color-black"></span>
+		                          <span class="catalog__color catalog__color-white"></span>
+		                          <span class="catalog__color catalog__color-blue"></span>
+		                      </div>
+		                  </div>
+		              </a>
+		          </div>
+		      </div>
+		  </div>
+		</div>
+		
+		
+		<div class="modal fade" id="selecSize" tabindex="-1" role="dialog" aria-labelledby="selecSize" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title modal-title-size" id="exampleModalLongTitle">ПОЖАЛУЙСТА ВЫБЕРЕТЕ РАЗМЕР</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="modal__dashboard__line">
+		          <div class="modal_line__kind">
+		              <div>
+		                  <input type="radio" id="size_xs" name="size" />
+		                  <span class="custom-modal-radio"></span>
+		                  <label for="size_xs">xs</label>
+		              </div>
+		              <div>
+		                  <input type="radio" id="size_s" name="size" />
+		                  <span class="custom-modal-radio"></span>
+		                  <label for="size_s">s</label>
+		              </div>
+		              <div>
+		                  <input type="radio" id="size_m" name="size" />
+		                  <span class="custom-modal-radio"></span>
+		                  <label for="size_m">m</label>
+		              </div>
+		          </div>
+		          <div class="modal_line__kind">
+		            <div>
+		                <input type="radio" id="size_L" name="size" />
+		                <span class="custom-modal-radio"></span>
+		                <label for="size_L">L</label>
+		            </div>
+		            <div>
+		                <input type="radio" id="size_XL" name="size" />
+		                <span class="custom-modal-radio"></span>
+		                <label for="size_XL">XL</label>
+		            </div>
+		            <div>
+		                <input type="radio" id="size_XLL" name="size" />
+		                <span class="custom-modal-radio"></span>
+		                <label for="size_XLL">XLL</label>
+		            </div>
+		        </div>
+		      </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<div class="modal fade" id="addCart" tabindex="-1" role="dialog" aria-labelledby="addCart" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header modal-header-addCart">
+		        <div class="modal-header-txt">
+		          <h5 class="modal-title-addCart" id="addCart">Спасибо</h5>
+		          <h5 class="modal-subtitle" id="addCart">Товар успешно 
+		            добавлен в корзину</h5>
+		        </div>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <a class="modal-addcart-btn modal-addcart-btn-next" href="#">ПРОДОЛЖИТЬ ПОКУПКИ</a>
+		        <a class="modal-addcart-btn" href="#">в корзину</a>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</main>
+
+	<footer class="footer">
+	    <div class="social__word">
+	        <div class="word__items">
+	            <div class="word__line__one"> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	            </div>
+	            <div class="word__line__two">
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span>
+	            </div>
+	        </div>
+	    </div>
+	
+	    <div class="container">
+	        <div class="footer__socials">
+	            <div class="footer__social">
+	                <div class="social__image"><img src="assets/img/footer/instagram-jeans.jpg"></div>
+	                <div class="social__link">
+	                    <a href="#">instagram</a>
+	                </div>
+	            </div>
+	            <div class="footer__social">
+	                <div class="social__image"><img src="assets/img/footer/vk-jeans.jpg"></div>
+	                <div class="social__link">
+	                    <a href="#">vk</a>
+	                </div>
+	            </div>
+	            <div class="footer__social">
+	                <div class="social__image"><img src="assets/img/footer/telegram-jeans.jpg"></div>
+	                <div class="social__link">
+	                    <a href="#">telegram</a>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="footer__logos">
+	            <div class="footer__logo"><img src="assets/img/footer/logo.svg"></div>
+	            <div class="social__icons">
+	                <a href="#" class="social__icon"><img src="assets/img/footer/telegram.svg"></a>
+	                <a href="#" class="social__icon"><img src="assets/img/footer/inst.svg"></i></a>
+	                <a href="#" class="social__icon"><img src="assets/img/footer/vk.svg"></a>
+	            </div>
+	        </div>
+	        <div class="footer__menus">
+	            <nav class="footer__menu">
+	                <ul>
+	                    <li><a href="#">компания</a></li>
+	                    <li><a href="#">каталог</a></li>
+	                    <li><a href="#">покупателю</a></li>
+	                    <li><a href="#">доставка</a></li>
+	                    <li><a href="#">возврат</a></li>
+	                    <li><a href="#">таблица размеров</a></li>
+	                    <li><a href="#">про LTB JEANS</a></li>
+	                    <li><a href="#">где магазины</a></li>
+	                    <li><a href="#">сертификаты</a></li>
+	                </ul>
+	            </nav>
+	        </div>
+	        <div class="footer__line"></div>
+	        <div class="footer__desc">
+	            <div class="desc__item">
+	                <span>Контакты</span>
+	                <span>Коломяжский пр. 17/1,<br> ТРК «СИТИ МОЛЛ», 2 этаж</span>
+	            </div>
+	            <div class="desc__item">
+	                <span>с 10:00 до 22:00 </span>
+	                <span>пн-вс</span>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+
+<script src="https://unpkg.com/gsap/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/87c59e1119.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swup@4"></script>
+<script src="assets/js/app.min.js"></script>
+
+</body>
+</html>
