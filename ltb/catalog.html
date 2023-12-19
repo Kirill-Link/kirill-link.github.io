@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.min.css?v222">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <!-- Favicons -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5"> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <title>catalog</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    
+</head>
+<body>
+	
+	<svg style="display: none;">
+	    <symbol id="telegram" viewbox="0 0 548.358 548.358">
+	        <g></g>
+	    </symbol>
+	</svg>
+
+	<header class="header">
+	    <div class="container">
+	        <div class="header__items">
+	            <div class="header__item">
+	                <div class="header__menu">
+	
+	                    <nav class="menu__items">
+	                        <div class="nav__burger">
+	                            <div id="menu-toggle">
+	                                <div id="hamburger">
+	                                  <span></span>
+	                                  <span></span>
+	                                  <span></span>
+	                                </div>
+	                                <div id="cross">
+	                                  <span></span>
+	                                  <span></span>
+	                                </div>
+	                              </div>
+	                        </div>
+	                        <div class="navigation">
+	                            <div class="navigation__title">Меню</div>
+	                            <ul class="menu">
+	                                <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+	                                <li class="menu__item">
+	                                    <a class="menu__link" href="#">Каталог</a>
+	                                    <ul>
+	                                        <li><a href="/catalog.html">Каталог</a></li>
+	                                        <li><a>Рубашки</a></li>
+	                                        <li><a>Шорты</a></li>
+	                                        <li><a>Шорты</a></li>
+	                                    </ul>
+	                                </li>
+	                                <li class="menu__item"><a class="menu__link" href="faq.html">FAQ</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="gift.html">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="delivery.html">доставка</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="contact.html">Контакты</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="#">Кабинет</a>
+	                                    <ul>
+	                                        <li><a href="account.html">Регистрация</a></li>
+	                                        <li><a href="secseful.html">Подтверждение</a></li>
+	                                        <li><a href="user-profil.html">Личный кабинет</a></li>
+	                                        <li><a href="red-user-profil.html">Личные кабинет редактирование</a></li>
+	                                        <li><a href="add-adress.html">Добавление адресса</a></li>
+	                                    </ul>
+	                                </li>
+	                                <li class="menu__item"><a class="menu__link" href="favorite.html">Избранное</a></li>
+	                                <li class="menu__item"><a class="menu__link" href="order.html">Заказ</a></li>
+	
+	                            </ul>
+	                            <div class="navigaton__socials">
+	                                <div class="navigaton__socials__item"><a href="#"><img src="assets/img/social/telega.png"></a></div>
+	                                <div class="navigaton__socials__item"><a href="#"><img src="assets/img/social/inst.png"></a></div>
+	                                <div class="navigaton__socials__item"><a href="#"><img src="assets/img/social/vk.png"></a></div>
+	                            </div>
+	                        </div>
+	                    </nav>
+	                </div>
+	            </div>
+	            <div class="header__item">
+	                <div class="header__logo">
+	                    <a class="logo__items"  href="index.html">
+	                        <img src="assets/img/header/logo.png">
+	                    </a>
+	                </div>
+	            </div>
+	            <div class="header__item">
+	                <div class="header__links">
+	                    <a class="header__link" href="search.html">
+	                        <img src="assets/img/header/user.svg">
+	                    </a>
+	                    <a class="header__link" href="search.html">
+	                        <img src="assets/img/header/search.svg">
+	                    </a>
+	                    <a class="header__link" href="basket.html">
+	                        <img src="assets/img/header/market.svg">
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+	<div id="circle" class="circle-cursor circle-cursor--inner" ></div>	<main>
+		<!-- Content -->
+		
+		<div class="catalogs__menu">
+		    <div class="container">
+		        <div class="swiper catalog__menus" data-no-swup>
+		            <ul class="swiper-wrapper">
+		              <li class="swiper-slide" ><a href="#">джинсы</a></li>
+		              <li class="swiper-slide"><a href="#">футболки</a></li>
+		              <li class="swiper-slide" ><a href="#">рубашки</a></li>
+		              <li class="swiper-slide" ><a href="#">шорты</a></li>
+		              <li class="swiper-slide" ><a href="#">аксессуары</a></li>
+		              <li class="swiper-slide" ><a href="#">каталог</a></li>
+		              <li class="swiper-slide" ><a href="#">каталог</a></li>
+		            </ul>
+		        </div>     
+		    </div>
+		</div> <!-- catalogs__menu -->
+		
+		<div class="cotalog">
+		    <div class="container">
+		        <div class="cotalog__items">
+		            <div class="catalog__item catalog__item-filltre">
+		                <div class="catalog__filltre">
+		                    <span class="filltre__btn ">Фильтр</span>
+		
+		                    <div class="filltre__body ">
+		                        <div class="filltre__items"  >
+		                            <div class="filltre__item">
+		                                <div class="filltre__title">размер</div>
+		                                <div class="filltre__subtitle">waist</div>
+		                                <div class="filltre__dashboards">
+		                                    <div class="filltre__dashboard__line">
+		                                        <div class="line__kind">
+		                                            <div>
+		                                                <input type="radio" id="size_23" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_23">23</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_24" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_24">24</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_25" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_25">25</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_26" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_26">26</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_27" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_27">27</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_28" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_28">28</label>
+		                                            </div>
+		                                        </div>
+		                                        <div class="line__kind">
+		                                            <div>
+		                                                <input type="radio" id="size_xs" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_xs">xs</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_s" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_s">s</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_m" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_m">m</label>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="filltre__dashboard__line">
+		                                        <div class="line__kind">
+		                                            <div>
+		                                                <input type="radio" id="size_228" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_228">28</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_29" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_29">29</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_30" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_30">30</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_31" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_31">31</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_32" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_32">32</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_33" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_33">33</label>
+		                                            </div>
+		                                        </div>
+		                                        <div class="line__kind">
+		                                            <div>
+		                                                <input type="radio" id="size_2xs" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_2xs">xs</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_2s" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_2s">s</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_2m" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_2m">m</label>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		    
+		                            <div class="filltre__item filltre__item-length">
+		                                <div class="filltre__title">размер</div>
+		                                <div class="filltre__subtitle">length</div>
+		                                <div class="filltre__dashboards">
+		                                    <div class="filltre__dashboard__line">
+		                                        <div class="line__kind">
+		                                            <div>
+		                                                <input type="radio" id="size_34" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_34">34</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_35" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_35">35</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_36" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_36">36</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_37" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_37">37</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_38" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_38">38</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_39" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_39">39</label>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="filltre__dashboard__line">
+		                                        <div class="line__kind">
+		                                            <div>
+		                                                <input type="radio" id="size_40" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_40">40</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_41" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_41">41</label>
+		                                            </div>
+		                                            <div>
+		                                                <input type="radio" id="size_42" name="size" />
+		                                                <span class="custom-radio"></span>
+		                                                <label for="size_42">42</label>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		    
+		                            <div class="filltre__item filltre__item-length"">
+		                                <div class="filltre__title">Посадка</div>
+		                                <div class="filltre__dashboards">
+		                                    <div class="vertical__line">
+		                                        <div>
+		                                            <input type="radio" id="posadka_down" name="posadka" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="posadka_down">низкая посадка</label>
+		                                        </div>
+		                                        <div>
+		                                            <input type="radio" id="posadka_midle" name="posadka" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="posadka_midle">средняя посадка</label>
+		                                        </div>
+		                                        <div>
+		                                            <input type="radio" id="posadka_hight" name="posadka" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="posadka_hight">высокая посадка</label>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                            <div class="filltre__item ">
+		                                <div class="filltre__title">цвет</div>
+		                                <div class="filltre__dashboards">
+		                                    <div class="vertical__line">
+		                                        <div>
+		                                            <input type="radio" id="black" name="color" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="black">черный</label>
+		                                        </div>
+		                                        <div>
+		                                            <input type="radio" id="blue" name="color" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="blue">синий</label>
+		                                        </div>
+		                                        <div>
+		                                            <input type="radio" id="gray" name="color" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="gray">серый</label>
+		                                        </div>
+		                                        <div>
+		                                            <input type="radio" id="white" name="color" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="white">белый</label>
+		                                        </div>
+		                                        <div>
+		                                            <input type="radio" id="light-blue" name="color" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="light-blue">голубой</label>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                            <div class="filltre__item ">
+		                                <div class="filltre__title">Пол</div>
+		                                <div class="filltre__dashboards">
+		                                    <div class="vertical__line">
+		                                        <div>
+		                                            <input type="radio" id="male" name="sex" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="male">мужские</label>
+		                                        </div>
+		                                        <div>
+		                                            <input type="radio" id="female" name="sex" />
+		                                            <span class="custom-radio custom-radio-vertical"></span>
+		                                            <label for="female">женские</label>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		    
+		                        <div class="filltre__buttons">
+		                            <a href="#">Отмена</a>
+		                            <a href="#">Сохранить</a>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		    
+		            <div class="catalog__item catalog__item-product">
+		                <div class="catalog__products">
+		                    <div class="catalog__product">
+		                        <a href="inner-catalog.html" class="catalog__product__link">
+		                            <div class="catalog__image">
+		                                <img src="assets/img/catalog/1.png">
+		                            </div>
+		                            <div class="catalog__title">Loretta jeans</div>
+		                            <div class="catalog__info">
+		                                <div class="catalog__price">10 000 руб</div>
+		                                <div class="catalog__colors">
+		                                    <span class="catalog__color catalog__color-black"></span>
+		                                    <span class="catalog__color catalog__color-white"></span>
+		                                    <span class="catalog__color catalog__color-blue"></span>
+		                                </div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                    <div class="catalog__product">
+		                        <a href="inner-catalog.html" class="catalog__product__link">
+		                            <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                            <div class="catalog__title">Loretta jeans</div>
+		                            <div class="catalog__info">
+		                                <div class="catalog__price">10 000 руб</div>
+		                                <div class="catalog__colors">
+		                                    <span class="catalog__color catalog__color-black"></span>
+		                                    <span class="catalog__color catalog__color-white"></span>
+		                                    <span class="catalog__color catalog__color-blue"></span>
+		                                </div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                    <div class="catalog__product">
+		                        <a href="inner-catalog.html" class="catalog__product__link">
+		                            <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                            <div class="catalog__title">Loretta jeans</div>
+		                            <div class="catalog__info">
+		                                <div class="catalog__price">10 000 руб</div>
+		                                <div class="catalog__colors">
+		                                    <span class="catalog__color catalog__color-black"></span>
+		                                    <span class="catalog__color catalog__color-white"></span>
+		                                    <span class="catalog__color catalog__color-blue"></span>
+		                                </div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                    <div class="catalog__product">
+		                        <a href="inner-catalog.html" class="catalog__product__link">
+		                            <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                            <div class="catalog__title">Loretta jeans</div>
+		                            <div class="catalog__info">
+		                                <div class="catalog__price">10 000 руб</div>
+		                                <div class="catalog__colors">
+		                                    <span class="catalog__color catalog__color-black"></span>
+		                                    <span class="catalog__color catalog__color-white"></span>
+		                                    <span class="catalog__color catalog__color-blue"></span>
+		                                </div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                    <div class="catalog__product">
+		                        <a href="inner-catalog.html" class="catalog__product__link">
+		                            <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                            <div class="catalog__title">Loretta jeans</div>
+		                            <div class="catalog__info">
+		                                <div class="catalog__price">10 000 руб</div>
+		                                <div class="catalog__colors">
+		                                    <span class="catalog__color catalog__color-black"></span>
+		                                    <span class="catalog__color catalog__color-white"></span>
+		                                    <span class="catalog__color catalog__color-blue"></span>
+		                                </div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                    <div class="catalog__product">
+		                        <a href="inner-catalog.html" class="catalog__product__link">
+		                            <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                            <div class="catalog__title">Loretta jeans</div>
+		                            <div class="catalog__info">
+		                                <div class="catalog__price">10 000 руб</div>
+		                                <div class="catalog__colors">
+		                                    <span class="catalog__color catalog__color-black"></span>
+		                                    <span class="catalog__color catalog__color-white"></span>
+		                                    <span class="catalog__color catalog__color-blue"></span>
+		                                </div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                    <div class="catalog__product">
+		                        <a href="inner-catalog.html" class="catalog__product__link">
+		                            <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                            <div class="catalog__title">Loretta jeans</div>
+		                            <div class="catalog__info">
+		                                <div class="catalog__price">10 000 руб</div>
+		                                <div class="catalog__colors">
+		                                    <span class="catalog__color catalog__color-black"></span>
+		                                    <span class="catalog__color catalog__color-white"></span>
+		                                    <span class="catalog__color catalog__color-blue"></span>
+		                                </div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                    <div class="catalog__product">
+		                        <a href="inner-catalog.html" class="catalog__product__link">
+		                            <div class="catalog__image"><img src="assets/img/catalog/1.png"></div>
+		                            <div class="catalog__title">Loretta jeans</div>
+		                            <div class="catalog__info">
+		                                <div class="catalog__price">10 000 руб</div>
+		                                <div class="catalog__colors">
+		                                    <span class="catalog__color catalog__color-black"></span>
+		                                    <span class="catalog__color catalog__color-white"></span>
+		                                    <span class="catalog__color catalog__color-blue"></span>
+		                                </div>
+		                            </div>
+		                        </a>
+		                    </div>
+		
+		                </div>
+		            </div>
+		            
+		            <div class="catalog__item catalog__item-sort">
+		                <div class="catalog__sort">
+		                    <span class="sort__btn">сортировка</span>
+		
+		                    <div class="sort__body">
+		                        <div class="sort__items">
+		                            <div class="sort__title">сортировка по</div>
+		                            <div class="sort__dashboards">
+		                                <div class="sort__kind">
+		                                    <div>
+		                                        <label for="defoult">по умолчанию</label>
+		                                        <input type="radio" id="defoult" name="sort" />
+		                                        <span class="custom-radio"></span>
+		                                    </div>
+		                                    <div>
+		                                        <label for="defoult">по умолчанию</label>
+		                                        <input type="radio" id="defoult" name="sort" />
+		                                        <span class="custom-radio"></span>
+		                                    </div>
+		                                    <div>
+		                                        <label for="defoult">по умолчанию</label>
+		                                        <input type="radio" id="defoult" name="sort" />
+		                                        <span class="custom-radio"></span>
+		                                    </div>
+		                                    <div>
+		                                        <label for="defoult">по умолчанию</label>
+		                                        <input type="radio" id="defoult" name="sort" />
+		                                        <span class="custom-radio"></span>
+		                                    </div>
+		                                    <div>
+		                                        <label for="defoult">по умолчанию</label>
+		                                        <input type="radio" id="defoult" name="sort" />
+		                                        <span class="custom-radio"></span>
+		                                    </div>
+		                                    <div>
+		                                        <label for="defoult">по умолчанию</label>
+		                                        <input type="radio" id="defoult" name="sort" />
+		                                        <span class="custom-radio"></span>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</main>
+
+	<footer class="footer">
+	    <div class="social__word">
+	        <div class="word__items">
+	            <div class="word__line__one"> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	                <span>СОЦ</span> 
+	            </div>
+	            <div class="word__line__two">
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span> 
+	                <span>сети</span>
+	            </div>
+	        </div>
+	    </div>
+	
+	    <div class="container">
+	        <div class="footer__socials">
+	            <div class="footer__social">
+	                <div class="social__image"><img src="assets/img/footer/instagram-jeans.jpg"></div>
+	                <div class="social__link">
+	                    <a href="#">instagram</a>
+	                </div>
+	            </div>
+	            <div class="footer__social">
+	                <div class="social__image"><img src="assets/img/footer/vk-jeans.jpg"></div>
+	                <div class="social__link">
+	                    <a href="#">vk</a>
+	                </div>
+	            </div>
+	            <div class="footer__social">
+	                <div class="social__image"><img src="assets/img/footer/telegram-jeans.jpg"></div>
+	                <div class="social__link">
+	                    <a href="#">telegram</a>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="footer__logos">
+	            <div class="footer__logo"><img src="assets/img/footer/f-logo.png"></div>
+	            <div class="social__icons">
+	                <a href="#" class="social__icon"><img src="assets/img/footer/telegram.svg"></a>
+	                <a href="#" class="social__icon"><img src="assets/img/footer/inst.svg"></i></a>
+	                <a href="#" class="social__icon"><img src="assets/img/footer/vk.svg"></a>
+	            </div>
+	        </div>
+	        <div class="footer__menus">
+	            <nav class="footer__menu">
+	                <ul>
+	                    <li><a href="#">компания</a></li>
+	                    <li><a href="#">каталог</a></li>
+	                    <li><a href="#">покупателю</a></li>
+	                    <li><a href="#">доставка</a></li>
+	                    <li><a href="#">возврат</a></li>
+	                    <li><a href="#">таблица размеров</a></li>
+	                    <li><a href="#">про LTB JEANS</a></li>
+	                    <li><a href="#">где магазины</a></li>
+	                    <li><a href="#">сертификаты</a></li>
+	                </ul>
+	            </nav>
+	        </div>
+	        <div class="footer__line"></div>
+	        <div class="footer__desc">
+	            <div class="desc__item">
+	                <span>Контакты</span>
+	                <span>Коломяжский пр. 17/1,<br> ТРК «СИТИ МОЛЛ», 2 этаж</span>
+	            </div>
+	            <div class="desc__item">
+	                <span>с 10:00 до 22:00 </span>
+	                <span>пн-вс</span>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+
+<script src="https://unpkg.com/gsap/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/87c59e1119.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swup@4"></script>
+<script src="assets/js/app.min.js"></script>
+
+</body>
+</html>
