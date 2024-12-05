@@ -1,0 +1,245 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #56C5E3;
+    z-index: 1;
+    color: #fff;
+    overflow: hidden;
+}
+
+.header__wrapper {
+    max-width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.header__title {
+    margin: 0;
+}
+
+.header__navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #768ca0;
+    color: #fff;
+    width: 120px;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-50%);
+    transition: .3s;
+    box-shadow: 10px 2px 18px -18px rgba(0,0,0,1);
+}
+
+.navigation__controll {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: .1s;
+}
+
+.navigation__controll__burger {
+    cursor: pointer;
+    margin-top: 20px;
+    z-index: 1000000;
+}
+
+.navigation__title {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: rotate(-90deg);
+    font-size: 20px;
+}
+
+.header__navigation-active {
+    width: 10%;
+    transform: translateX(0);
+}
+
+.header__navigation-active .navigation__controll {
+    display: none;
+}
+
+.navigation__items {
+    position: relative;
+    width: 100%;
+
+}
+
+.navigatin__item {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+.navigatin__item a {
+    padding:15px;
+    text-align: center;
+}
+
+.navigatin__item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation__closed {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: -65%;
+    background-color: #768CA0;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.navigation__items-active .navigation__closed {
+    display: block;
+}
+
+.heder__items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    font-size: 10vh;
+    margin-bottom: 40px;
+}
+
+.header__title span {
+    display: block;
+
+}
+
+
+.header__gallery {
+    width: 47%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+
+.header__gallery img {
+    width: 100%;
+    height: 100%;
+}
+.hidden {
+  display: none; /* Скрываем все изображения с классом "hidden" */
+}
+
+.header__desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47%;
+    height: 300px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 25px;
+    color: #000;
+    position: relative;
+}
+
+.header__desc::before {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    content: '\201c';
+    font-size: 100px;
+}
+
+.header__desc::after {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    content: '\201d';
+    font-size: 100px;
+}
+
+
+
+
+main {
+    position: relative;
+    z-index: 2; /* Секции выше header */
+    background: #fff;
+    /* padding: 100px 20px; */
+    margin-top: 100vh; /* Секции начинаются после header */
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1); /* Эффект наложения */
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.books__header {
+    background-color: #AFAFAF;
+    height: 100%;
+    padding: 100px 0;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+}
+
+
+.books__up__title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.books__title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.books__sub__desc {
+    width: 50%;
+    font-size: 18px;
+}
+
+
+.books_content__title {
+    font-size: 22px;
+    margin: 25px 0;
+    font-weight: bold;
+}
+.book__content__inner {
+    padding-bottom: 15px;
+}
+.book__content__inner p {
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
