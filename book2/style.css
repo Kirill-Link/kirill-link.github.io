@@ -1,0 +1,346 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('img/bg.jpg') no-repeat center; /* Центрируем фон, убираем повторение */
+    background-size: cover; /* Изображение растягивается, сохраняя пропорции */
+    z-index: 1;
+    color: #fff;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 197, 227, 0.5); /* Полупрозрачное черное затемнение */
+    z-index: 2; /* Затемнение выше фона */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачное черное затемнение */
+    z-index: 2; /* Затемнение выше фона */
+}
+
+
+header * {
+    position: relative;
+    z-index: 3; /* Контент выше затемнения */
+}
+
+
+.header__wrapper {
+    max-width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.header__title {
+    margin: 0;
+}
+
+.header__navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #768ca0;
+    color: #fff;
+    width: 120px;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-50%);
+    transition: .3s;
+    box-shadow: 10px 2px 18px -18px rgba(0,0,0,1);
+}
+
+.navigation__controll {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: .1s;
+}
+
+.navigation__controll__burger {
+    cursor: pointer;
+    margin-top: 20px;
+    z-index: 1000000;
+}
+
+.navigation__title {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: rotate(-90deg);
+    font-size: 20px;
+}
+
+.header__navigation-active {
+    width: 10%;
+    transform: translateX(0);
+}
+
+.header__navigation-active .navigation__controll {
+    display: none;
+}
+
+.navigation__items {
+    position: relative;
+    width: 100%;
+
+}
+
+.navigatin__item {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+.navigatin__item a {
+    padding:15px;
+    text-align: center;
+}
+
+.navigatin__item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation__closed {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: -65%;
+    background-color: #768CA0;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.navigation__items-active .navigation__closed {
+    display: block;
+}
+
+.heder__items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.header__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    font-size: 9vh;
+    margin-bottom: 40px;
+}
+
+.header__title span {
+    display: block;
+    font-size: 7vh;
+    margin: 10px -;
+    color: #D47F63;
+}
+
+
+.header__gallery {
+    width: 47%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+
+.header__gallery img {
+    width: 100%;
+    height: 100%;
+}
+.hidden {
+  display: none; /* Скрываем все изображения с классом "hidden" */
+}
+
+.header__desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47%;
+    height: 300px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 25px;
+    color: #000;
+    position: relative;
+}
+
+.header__desc::before {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    content: '\201c';
+    font-size: 100px;
+}
+
+.header__desc::after {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    content: '\201d';
+    font-size: 100px;
+}
+
+
+.header__down {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 80px;
+    position: absolute;
+    left: 46%;
+    bottom: 7%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    padding: 20px 23px;
+    border-radius: 50%;
+    animation: breathe 1.5s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1); /* Исходный размер */
+    }
+    50% {
+        transform: scale(1.1); /* Увеличение размера на вдохе */
+    }
+}
+
+.header__down i {
+    font-size: 25px;
+    color: #fff;
+}
+
+
+main {
+    position: relative;
+    z-index: 2; /* Секции выше header */
+    background: #f2f2f2;
+    /* padding: 100px 20px; */
+    margin-top: 100vh; /* Секции начинаются после header */
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1); /* Эффект наложения */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.books__header {
+    position: relative; /* Для наложения затемнения */
+    background: url('img/glav-bg.jpg') no-repeat center center; /* Фон без повторений и по центру */
+    background-size: cover; /* Растягиваем изображение, сохраняя пропорции */
+    height: 100%;
+    padding: 100px 0;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.books__header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 197, 227, 0.5); /* Полупрозрачное черное затемнение */
+    z-index: 1; /* Затемнение выше фона */
+}
+
+.books__header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачное черное затемнение */
+    z-index: 1; /* Затемнение выше фона */
+}
+
+
+.books__header * {
+    position: relative;
+    z-index: 2; /* Контент выше затемнения */
+}
+
+
+
+.books__up__title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+    opacity: .7;
+}
+
+.books__title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.books__sub__desc {
+    width: 50%;
+    font-size: 18px;
+}
+
+
+.books_content__title {
+    font-size: 35px;
+    margin: 25px 0;
+    font-weight: bold;
+}
+.book__content__inner {
+    padding-bottom: 15px;
+}
+.book__content__inner p, .book__content__inner li {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.book__content__inner img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
