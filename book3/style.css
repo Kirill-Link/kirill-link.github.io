@@ -1,0 +1,680 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('img/bg.jpg') no-repeat center; /* Центрируем фон, убираем повторение */
+    background-size: cover; /* Изображение растягивается, сохраняя пропорции */
+    z-index: 1;
+    color: #fff;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 197, 227, 0.5); /* Полупрозрачное черное затемнение */
+    z-index: 2; /* Затемнение выше фона */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачное черное затемнение */
+    z-index: 2; /* Затемнение выше фона */
+}
+
+
+header * {
+    position: relative;
+    z-index: 3; /* Контент выше затемнения */
+}
+
+
+.header__wrapper {
+    max-width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/*  NAVIGATION */
+.navigation {
+    position: relative;
+    z-index: 5;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.navigation__items {
+    background-color: #fff;
+    border-radius: 25px;
+    width: 80%;
+    margin: 0 auto;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    right: 0;
+}
+
+.navigation__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation__button a {
+    text-decoration: none;
+    color: #D47F63;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.navigation__button a i {
+    font-size: 30px;
+}
+
+
+.chapters__header {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.chapters__header__title {
+    font-size: 35px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.chapters__header__link-closed{
+    font-size: 35px;
+    color: #fff;
+}
+
+.chapters__header__link-closed:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation__content {
+    width: 100vw;
+    z-index: 6;
+    position: fixed;
+    top: -120%;
+    left: 0;
+    right: 11%;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: top 0.5s ease;
+}
+
+
+.books__chapters {
+    width: 80%;
+    margin: 60px auto;
+    overflow-y: auto;
+    max-height: calc(100vh - 56px);
+}
+
+.chapters__items {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: 80px; */
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+}
+
+.chapter__item {
+    width: 23%;
+    background-color: #fff;
+    border: 1px solid red;
+    margin-bottom: 20px;
+    margin-right: 2%;
+
+    padding: 40px;
+    border-radius: 26px;
+}
+
+.chapter__item.active {
+    background-color: #D47F63;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+
+/* Общий стиль для блока */
+.chapter__item {
+    width: 23%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-right: 2%;
+
+    padding: 40px;
+    border-radius: 26px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px; /* Ширина блока (можно изменить) */
+    height: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Заголовок, показывается изначально */
+.chapter__title {
+    font-size: 25px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+/* Описание, скрыто изначально */
+.chapter__desc {
+    font-size: 16px;
+    line-height: 1.4;
+    opacity: 0; /* Описание невидимо */
+    visibility: hidden; /* Скрыто для взаимодействия */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px; /* Совпадает с отступами родителя */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* При наведении на блок */
+.chapter__item:hover .chapter__title {
+    opacity: 0; /* Заголовок исчезает */
+    visibility: hidden; /* Отключаем взаимодействие с заголовком */
+}
+
+.chapter__item:hover .chapter__desc {
+    opacity: 1; /* Описание появляется */
+    visibility: visible; /* Включаем видимость */
+}
+
+
+
+
+
+
+
+.page__navigarion__content {
+    width: 100vw;
+    z-index: 7;
+    position: fixed;
+    top: 0%;
+    right: -120%;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: right 0.5s ease;
+    display: flex;
+    justify-content: end;
+}
+
+.page__navigation__closed {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.page__navigations {
+    width: 20%;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+
+.page__navigations__items {
+    margin-top: 50px;
+}
+
+.page__navigation__item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    padding-left: 40px;
+}
+
+.page__navigation__item a {
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*  NAVIGATION */
+
+
+
+
+.header__title {
+    margin: 0;
+}
+
+
+.heder__items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.header__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    font-size: 9vh;
+    margin-bottom: 40px;
+}
+
+.header__title span {
+    display: block;
+    font-size: 7vh;
+    margin: 10px;
+    color: #D47F63;
+}
+
+@media(max-width:1143px){
+    .header__title {
+        font-size: 8vh;
+    }
+    .header__title span {
+        font-size: 6vh;
+    }
+}
+
+
+
+.header__gallery {
+    width: 47%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+
+.header__gallery img {
+    width: 100%;
+    height: 100%;
+}
+.hidden {
+  display: none; /* Скрываем все изображения с классом "hidden" */
+}
+
+.header__desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47%;
+    height: 300px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 25px;
+    color: #000;
+    position: relative;
+}
+
+.header__desc::before {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    content: '\201c';
+    font-size: 100px;
+}
+
+.header__desc::after {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    content: '\201d';
+    font-size: 100px;
+}
+
+
+.header__down {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 80px;
+    position: absolute;
+    left: 46%;
+    bottom: 7%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: breathe 1.5s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1); /* Исходный размер */
+    }
+    50% {
+        transform: scale(1.1); /* Увеличение размера на вдохе */
+    }
+}
+
+.header__down i {
+    font-size: 25px;
+    color: #fff;
+}
+
+
+@media(max-width:1103px) {
+    .header__gallery {
+        display: none;
+    }
+    .header__desc {
+        width: 100%;
+        height: 250px;
+    }
+
+    .header__desc::before {
+        top: 2%;
+        left: 2%;
+    }
+
+    .header__desc::after {
+        right: 2%;
+        bottom: -15%;
+    }
+}
+
+@media(max-width:1017px) {
+    .header__title {
+        font-size: 7vh;
+    }
+}
+
+@media(max-width:890px) {
+    .header__title {
+        font-size: 6vh;
+    }
+    .header__title span {
+        font-size: 5vh;
+    }
+}
+
+@media(max-width:763px) {
+    .header__title {
+        font-size: 5vh;
+    }
+    .header__title span {
+        font-size: 4vh;
+    }
+}
+
+@media(max-width:636px) {
+    .header__title {
+        font-size: 4vh;
+    }
+    .header__title span {
+        font-size: 3vh;
+    }
+}
+
+main {
+    position: relative;
+    z-index: 2; /* Секции выше header */
+    background: #f2f2f2;
+    /* padding: 100px 20px; */
+    margin-top: 100vh; /* Секции начинаются после header */
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1); /* Эффект наложения */
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+@media(max-width:1020px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media(max-width:550px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+.books__header {
+    position: relative; /* Для наложения затемнения */
+    background: url('img/glav-bg.jpg') no-repeat center center; /* Фон без повторений и по центру */
+    background-size: cover; /* Растягиваем изображение, сохраняя пропорции */
+    height: 100%;
+    padding: 100px 0;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.books__header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 197, 227, 0.5); /* Полупрозрачное черное затемнение */
+    z-index: 1; /* Затемнение выше фона */
+}
+
+.books__header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачное черное затемнение */
+    z-index: 1; /* Затемнение выше фона */
+}
+
+
+.books__header * {
+    position: relative;
+    z-index: 2; /* Контент выше затемнения */
+}
+
+
+
+.books__up__title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+    opacity: .7;
+}
+
+.books__title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.books__sub__desc {
+    width: 50%;
+    font-size: 18px;
+}
+
+
+.books_content__title {
+    font-size: 35px;
+    margin: 25px 0;
+    font-weight: bold;
+}
+.book__content__inner {
+    padding-bottom: 15px;
+}
+.book__content__inner p, .book__content__inner li {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.book__content__inner img {
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+
+.book__comments {
+    padding-bottom: 40px;
+}
+
+.book__comments button {
+    outline: none;
+    border: 0;
+    background-color: #D47F63;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.book__comments button:first-child {
+    width: 80%;
+    margin-right: 1%;
+}
+
+.book__comments button:last-child {
+    width: 18%;
+}
+
+
+@media(max-width: 1100px) {
+    .books__sub__desc {
+        width: 90%;
+    }
+}
+
+@media(max-width:550px) {
+    .books__title {
+        font-size: 30px;
+    }
+
+    .books__sub__desc {
+        width: 90%;
+    }
+}
+
+
+
+/* background-color: #D47F63; */
+
+.history {
+    position: fixed;
+    top: 50%;
+    z-index: 2;
+}
+
+.history__content {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    transition: transform 0.5s ease;
+    transform: translateX(-300px);
+}
+
+.history__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+}
+
+
+.history__btn {
+    background-color: #D47F63;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -40%;
+    top: 40%;
+    bottom: 0;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+.history__item {
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.history__item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+
+.history__item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-decoration: none;
+    color: #000;
+}

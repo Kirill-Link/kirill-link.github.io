@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+
+	<title>Добрые оффисные сказки</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+	<!-- Подключаем jQuery (если ещё не подключён) -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!-- Подключаем FancyBox скрипт -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<script src="https://kit.fontawesome.com/7b6efd9478.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+	<header>
+		<div class="header__wrapper">
+			<div class="heder__items">
+				<div class="header__item">
+					<h1 class="header__title">Добрые офисные сказки <span>Книга Царева.А</span></h1>
+				</div>
+				<div class="header__item">
+					<div class="header__gallery">
+
+						<a href="img/1.jpg" data-fancybox="gallery" data-caption="Описание изображения 1" class="first">
+							<img src="img/1.jpg">
+						</a>
+
+						<a href="img/1.jpg" data-fancybox="gallery" data-caption="Описание изображения 2"
+							class="hidden">
+							<img src="img/1.jpg">
+						</a>
+
+						<a href="img/1.jpg" data-fancybox="gallery" data-caption="Описание изображения 3"
+							class="hidden">
+							<img src="img/1.jpg">
+						</a>
+
+						<a href="img/1.jpg" data-fancybox="gallery" data-caption="Описание изображения 4"
+							class="hidden">
+							<img src="img/1.jpg">
+						</a>
+					</div>
+					<div class="header__desc">Тема конкуренции за персонал в индустрии BTL всегда стоит остро. Для
+						успешного рекрутинга необходимо следить за трендами рынка и привлекать таланты. Всегда ли стоит
+						прилагать усилия, чтобы эти таланты удержать?</div>
+				</div>
+				<a href="#glava1" class="header__down"><i class="fa-solid fa-arrow-down"></i></a>
+			</div>
+		</div>
+	</header>
+
+
+	<div class="navigation">
+		<div class="navigation__container">
+			<div class="navigation__items">
+				<div class="navigation__buttons">
+					<div class="navigation__button"><a href="#" class="navigation__button__books"><i
+								class="fa-solid fa-book"></i></a></div>
+					<div class="navigation__button"><a href="#" class="navigation__button__menu"><i
+								class="fa-solid fa-bars"></i></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="navigation__content">
+		<div class="chapters__header">
+			<div class="chapters__header__title">Оглавление</div>
+			<a href="#" class="chapters__header__link-closed"><i class="fa-solid fa-xmark"></i></a>
+		</div>
+		<div class="books__chapters">
+			<div class="chapters__items">
+				<a href="#glava1" class="chapter__item">
+					<div class="chapter__title">Глава 1</div>
+					<div class="chapter__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Consequatur quo maiores unde aperiam ipsam facere ipsum obcaecati fuga iusto error?
+						Quasi nulla corporis deserunt magnam? Facere sapiente voluptatum quo tempore!</div>
+				</a>
+				<a href="#glava2" class="chapter__item">
+					<div class="chapter__title">Глава 2</div>
+					<div class="chapter__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Consequatur quo maiores unde aperiam ipsam facere ipsum obcaecati fuga iusto error?
+						Quasi nulla corporis deserunt magnam? Facere sapiente voluptatum quo tempore!</div>
+				</a>
+				<a href="#glava3" class="chapter__item">
+					<div class="chapter__title">Глава 3</div>
+					<div class="chapter__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Consequatur quo maiores unde aperiam ipsam facere ipsum obcaecati fuga iusto error?
+						Quasi nulla corporis deserunt magnam? Facere sapiente voluptatum quo tempore!</div>
+				</a>
+				<a href="#glava4" class="chapter__item">
+					<div class="chapter__title">Глава 4</div>
+					<div class="chapter__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Consequatur quo maiores unde aperiam ipsam facere ipsum obcaecati fuga iusto error?
+						Quasi nulla corporis deserunt magnam? Facere sapiente voluptatum quo tempore!</div>
+				</a>
+				<a href="#glava5" class="chapter__item">
+					<div class="chapter__title">Глава 5</div>
+					<div class="chapter__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Consequatur quo maiores unde aperiam ipsam facere ipsum obcaecati fuga iusto error?
+						Quasi nulla corporis deserunt magnam? Facere sapiente voluptatum quo tempore!</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="page__navigarion__content">
+		<span class="page__navigation__closed"><i class="fa-solid fa-xmark"></i></span>
+		<div class="page__navigations">
+			<div class="page__navigations__items">
+				<div class="page__navigation__item"><a href="#">Главная</a></div>
+				<div class="page__navigation__item"><a href="#">О книге</a></div>
+				<div class="page__navigation__item"><a href="#">Об авторе</a></div>
+				<div class="page__navigation__item"><a href="#">Где купить</a></div>
+				<div class="page__navigation__item"><a href="#">Контакты</a></div>
+			</div>
+		</div>
+	</div>
+
+	<main>
+
+		<div class="books">
+			<div class="books__header">
+				<div class="books__up__title">Введение</div>
+				<div class="books__title">Добрые офисные сказки</div>
+			</div>
+			<div class="book__content">
+				<div class="container">
+					<div class="book__content__inner">
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ut saepe officiis magni.
+							Dignissimos perferendis libero minima rem nesciunt. Eos velit rerum in minima reiciendis,
+							placeat vel sapiente eaque tempore.
+							Delectus ea blanditiis eveniet autem quos aut voluptatem fuga quia. Eius tempore eaque
+							tempora
+							quod magni explicabo pariatur voluptate perferendis sit eligendi! Aperiam officia distinctio
+							rerum sed dolore maiores tenetur.
+							Doloremque et sint harum tempora ab veritatis eligendi consequuntur eos, rerum maiores
+							repudiandae adipisci autem culpa facilis aperiam architecto mollitia ipsam vel repellat a!
+							Aliquam maxime veniam voluptate doloremque natus!
+							Architecto distinctio excepturi quibusdam quisquam quia! Adipisci, minima aperiam nostrum
+							deserunt cupiditate tempora doloremque molestiae. Illo culpa distinctio molestiae, neque
+							saepe,
+							doloremque voluptas harum architecto laboriosam repudiandae eveniet suscipit praesentium?
+							Quidem provident repellat laboriosam architecto amet. Cum, recusandae dignissimos? Error
+							modi
+							laboriosam nostrum velit delectus, facilis earum accusantium, totam assumenda ullam
+							reprehenderit hic optio nihil provident incidunt porro possimus culpa?
+							Officiis totam illo dolorem reiciendis ut nisi quia quos explicabo impedit consectetur
+							perspiciatis quidem recusandae labore ab accusamus, ex corporis earum suscipit asperiores
+							vel
+							natus vero. Ipsum animi dicta nam!
+							Enim consequuntur minima eum quasi doloremque, ullam recusandae. Voluptatum maxime dolorem
+							excepturi deleniti, minus, eos, distinctio at illum itaque harum voluptatem! Optio aperiam
+							iure
+							placeat, eius aliquam sed aut quasi.
+							Ratione cupiditate ipsam ullam aspernatur voluptate voluptates dicta minus porro modi nihil
+							expedita possimus voluptatem fugiat harum, facilis tempora vitae, obcaecati sequi quae in,
+							dolorem minima! Iste eius fuga eaque!
+							Dolores enim consectetur commodi mollitia iure, ut, cum, modi illo dolore ducimus magni nemo
+							aliquam. Accusamus at omnis laborum quas, ut minima atque similique nemo, officiis eius
+							itaque
+							quo. Natus!
+							Autem sint possimus quae consequatur vel, odio incidunt iste. Distinctio, praesentium
+							necessitatibus nostrum atque dolores porro rem earum, odio, vero quam quibusdam excepturi
+							nemo
+							voluptas harum id fugiat. Ad, asperiores.
+						</p>
+
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ut saepe officiis magni.
+							Dignissimos perferendis libero minima rem nesciunt. Eos velit rerum in minima reiciendis,
+							placeat vel sapiente eaque tempore.
+							Delectus ea blanditiis eveniet autem quos aut voluptatem fuga quia. Eius tempore eaque
+							tempora
+							quod magni explicabo pariatur voluptate perferendis sit eligendi! Aperiam officia distinctio
+							rerum sed dolore maiores tenetur.
+							Doloremque et sint harum tempora ab veritatis eligendi consequuntur eos, rerum maiores
+							repudiandae adipisci autem culpa facilis aperiam architecto mollitia ipsam vel repellat a!
+							Aliquam maxime veniam voluptate doloremque natus!
+							Architecto distinctio excepturi quibusdam quisquam quia! Adipisci, minima aperiam nostrum
+							deserunt cupiditate tempora doloremque molestiae. Illo culpa distinctio molestiae, neque
+							saepe,
+							doloremque voluptas harum architecto laboriosam repudiandae eveniet suscipit praesentium?
+							Quidem provident repellat laboriosam architecto amet. Cum, recusandae dignissimos? Error
+							modi
+							laboriosam nostrum velit delectus, facilis earum accusantium, totam assumenda ullam
+							reprehenderit hic optio nihil provident incidunt porro possimus culpa?
+							Officiis totam illo dolorem reiciendis ut nisi quia quos explicabo impedit consectetur
+							perspiciatis quidem recusandae labore ab accusamus, ex corporis earum suscipit asperiores
+							vel
+							natus vero. Ipsum animi dicta nam!
+							Enim consequuntur minima eum quasi doloremque, ullam recusandae. Voluptatum maxime dolorem
+							excepturi deleniti, minus, eos, distinctio at illum itaque harum voluptatem! Optio aperiam
+							iure
+							placeat, eius aliquam sed aut quasi.
+							Ratione cupiditate ipsam ullam aspernatur voluptate voluptates dicta minus porro modi nihil
+							expedita possimus voluptatem fugiat harum, facilis tempora vitae, obcaecati sequi quae in,
+							dolorem minima! Iste eius fuga eaque!
+							Dolores enim consectetur commodi mollitia iure, ut, cum, modi illo dolore ducimus magni nemo
+							aliquam. Accusamus at omnis laborum quas, ut minima atque similique nemo, officiis eius
+							itaque
+							quo. Natus!
+							Autem sint possimus quae consequatur vel, odio incidunt iste. Distinctio, praesentium
+							necessitatibus nostrum atque dolores porro rem earum, odio, vero quam quibusdam excepturi
+							nemo
+							voluptas harum id fugiat. Ad, asperiores.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="books">
+			<div class="books__header" id="glava1">
+				<div class="books__up__title">Глава 1.5</div>
+				<div class="books__title">5 ножей в спину веры в молодой и дружный коллектив</div>
+				<div class="books__sub__desc">Тема конкуренции за персонал в индустрии BTL всегда стоит остро. Для
+					успешного рекрутинга необходимо следить за трендами рынка и привлекать таланты. Всегда ли стоит
+					прилагать усилия, чтобы эти таланты удержать?</div>
+			</div>
+
+			<div class="book__content">
+				<div class="container">
+					<div class="book__content__inner">
+						<img src="img/glava1.png">
+
+						<p>&ndash; Александр, мне очень нравится работа с вами, но мне неожиданно предложили работу в
+							Rambler. Ну как неожиданно, я ходила на собеседование. Ну да, но думала, что меня не
+							возьмут.&nbsp;</p>
+						<p>Симпатичная пиарщица, которая ну никак не выглядела карьеристкой и не проявляла себя
+							проактивно, действительно выглядела взволнованной. Явно готовилась к разговору и
+							продумывала, что скажет.&nbsp;</p>
+						<p>&ndash; Там, конечно, будут изначально платить меньше. Но у них обучение предусмотрено с
+							нуля. Ну и цифровой маркетинг мне очень интересен. ...&nbsp;</p>
+						<p>На этом месте мне уже есть что сказать. Я глубоко вздыхаю и говорю:&nbsp;</p>
+						<p>&ndash; Да что ты будешь делать! И вы туда же.</p>
+						<p>Но нет. Этого, я конечно, не говорю (спойлер: в конце статьи расскажу почему). Это я так
+							думаю про себя. Ведь это уже пятый толковый сотрудник, которого переманивает
+							&laquo;диджитал&raquo;. Причём выбирают себе цели совершенно рандомно. То аккаунт, то
+							координатор, то менеджер нового бизнеса, то пиарщик (второй подряд).<br />Но через пару
+							минут здравый смысл побеждает раздражение. Никто не охотится, конечно, за нашими
+							сотрудниками. Просто они смотрят на более перспективные компании. И тут я опять поддаюсь
+							досаде. &laquo;А что наша компания неперспективная? Хороший офис, зарплата вовремя и белая,
+							корпоративы проводят, онлайн курсы вам оплачивают.</p>
+						<p>&laquo;Только, только, только этого мало&raquo;. Как поётся в одной винтажной песенке.
+							Современный сотрудник всего вышеперечисленного ждёт по умолчанию. Качество бизнес-центра и
+							тимбилдинги по расписанию - это уже не то, что привлечёт к тебе молодых и перспективных
+							(самых талантливых разобрали корпорации ещё с 4-го курса вуза). Влечет сейчас имидж
+							компании, рыночные амбиции и отраслевая перспектива. Теперь это новый пакет &laquo;стандарт
+							+&raquo;, говоря терминологией автомобильных дилеров. Если чего-то не хватает, придётся
+							компенсировать чем-то другим. Причём лобовое повышение зарплаты почти уже не работает лет
+							так пять.&nbsp;</p>
+						<p>Тема конкуренции за персонал в BTL стоит остро. Отрасль давно переживает не лучшие времена,
+							что видно по серьезной ротации игроков, исчезновению некогда крупных компаний и падения
+							бюджетов. Все это не способствует оптимизму.&nbsp;</p>
+						<p>Но оставим &laquo;лирику&raquo; и перейдём к практическим советам.&nbsp;</p>
+						<ol>
+							<li aria-level="1">Оцените имидж вашей компании на рынке и в своём конкурентном сегменте. Не
+								так, конечно, как это делают крупные корпорации. Почитайте отзывы о своей компании на
+								специальных сайтах, спросите аккуратно мнение кандидатов, как они видят отличия вашей
+								компании и что считают сильными сторонами. Проведите анонимный опрос своих работающих
+								сотрудников. Спросите, что и как стоит улучшить, в какой приоритетности. Удивительно,
+								как мало мы знаем о сильных и слабых сторонах своих конкурентов. Печально, что о
+								конкурентах за кадры мы часто не знаем вообще ничего. Поняв, что у вас &laquo;не
+								так&raquo; в компании, начинайте исправлять. Сначала на уровне каких-то бытовых
+								улучшений, потом и за корпоративную культуру нужно будет браться. (Это я про реальные
+								ценности Команды, а не тимбилдинги, если что). Не обязательно это делать быстро, важно
+								действовать неумолимо и системно.&nbsp;</li>
+							<li aria-level="1">Посмотрите на темпы роста вашей компании. Если они ниже 20 процентов в
+								год, нужно крепко задуматься. Амбициозные и максимально результативные люди будут
+								неминуемо уходить из вашей компании, не видя &laquo;вызова&raquo;. Ну или вы будете
+								растить самовлюбленных &laquo;звёзд&raquo;, постоянно &laquo;заливая&raquo; их деньгами
+								и прочими приятностями. Людям нужна мотивация и если это не движение к новым целям, то
+								готовьте заменитель в виде дорогих и вредных &laquo;бонусов&raquo;. Что делать? Садиться
+								за планирование развития года на три вперёд. Прописывать это развитие и транслировать
+								команде.&nbsp;</li>
+							<li aria-level="1">Посмотрите критично на ваш рынок. Роста выручки может не быть и по этой
+								причине. Причине внешней, а потому сложно прорабатываемой. Вы можете делать крутые
+								проекты, но при падающем спросе заработать да и выжить вам будет непросто. Пресловутый
+								&laquo;диджитал&raquo; съедает сегменты рекламного рынка один за другим. Нет уже газет и
+								журналов, заканчивается радио, усыхает наружка. И будем честны - BTL тоже
+								&laquo;падает&raquo;. Нет уже изобильного разнообразия промо в магазинах, мало
+								проводится потребительских эвентов. Даже непотопляемый Мерчендайзинг как минимум. Если
+								вы (и мы тоже) не &laquo;отцифруетесь&raquo; в своих услугах и продуктах, хорошей
+								маржинальности и перспектив не видать. Это надо признать, принять и начать решительно
+								действовать.&nbsp;</li>
+							<li aria-level="1">Стройте систему, которая не очень зависит от конкретных людей. Страшную
+								вещь сказал. Понимаю. Особенно для тех, у кого небольшой бизнес и кажется все держится
+								на персоналиях. На универсальных многостаночниках и энтузиастах. Но, строго говоря,
+								никакого противоречия в этом нет. Люди и системность бизнеса - два равновесных элемента,
+								хотя не буду лукавить, система все же важнее. Проанализируйте, как структурирован и
+								описан ваш бизнес. Что там с должностными инструкциями, kpi, корпоративными стандартами.
+								Регламенты - вещь скучная, но нужная.</li>
+							<li aria-level="1">Ну и последнее. Руководитель, исцели себя сам. Посмотрите на себя со
+								стороны. Насколько вы привлекательны, как человек и работодатель? Есть прекрасная книга
+								с невнятным названием &laquo;Прыгни выше головы&raquo; Маршала Голдсмит. Она о том, как
+								не быть мудаком для подчиненных. Тема деликатная для честолюбивых управленцев, но автор
+								умело и корректно ее разжевывает. И что важно, Заканчивается книга простым и понятным
+								тестом. Он не электронный, придётся оцифровать. Проведите такой тест анонимно (через
+								Гугл формы или оптимально Телеграмм) среди тех, кем руководите. Наверняка узнаете что-то
+								полезное и неприятное. Я, кстати, такой опрос про себя провёл пару лет назад. И узнал,
+								что больше всего сотрудников раздражает моя привычка язвительно пошутить. А потому
+								стараюсь шутить теперь только в формате &laquo;Страшные офисные сказки&raquo;.&nbsp;
+							</li>
+						</ol>
+						<p>Ах, да, чуть не забыл. &ndash; Ну что ж, уважаю ваше решение, удачи! &ndash; говорю я
+							побледневшей от долго ожидания ответа &laquo;молодой и перспективной&raquo; сотруднице. И
+							начинаю писать письмо генеральному директору о развитии онлайн мерчендайзинга, а в другом
+							окне эту статью..</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="book__comments">
+					<div class="comments__buttons">
+						<button type="button">Комментарии</button>
+						<button type="button"><i class="fa-regular fa-pen-to-square"></i></button>
+					</div>
+
+					<div class="comments__content">
+						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+							aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									...
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="books">
+			<div class="books__header" id="glava2">
+				<div class="books__up__title">Глава 2</div>
+				<div class="books__title">Фиолетовая неприятность и Цифровой Эликсир для BTL эпохи ковида</div>
+				<div class="books__sub__desc">А где же теперь заработать на BTL? Если вы хотите оставаться на плаву,
+					переходите в Новый Дивный Цифровой мир.</div>
+			</div>
+
+			<div class="book__content">
+				<div class="container">
+					<div class="book__content__inner">
+						<p>&ndash; Александр, у нас проблема!&nbsp;</p>
+						<p>Ну куда же без проблем на эвенте для крупного французского бьюти-бренда. Наверняка кто-то
+							бейдж не того цвета прицепил или на кофе-брейк выложил обеденные салфетки...&nbsp;</p>
+						<p>&ndash; Координатор наш наехала на промоутера за фиолетовую помаду и рваные шорты, а она
+							оказалась...&nbsp;</p>
+						<p>&ndash; Вот эта! &ndash; смотрим вместе на одну из камер, с которых скоро начнётся
+							трансляция.</p>
+						<p>&nbsp;&ndash; Ага, она.&nbsp;</p>
+						<p>&ndash; Ну ей же лет 15 всего, как она вообще попала сюда?&nbsp;</p>
+						<p>&ndash; Ей 13! (Голос эккаунта дрожит. Ещё слез мне не хватало).</p>
+						<p>&ndash; Неужели дочка директора по маркетингу?&nbsp;</p>
+						<p>&ndash; Хуже, она оказалась их основной брэнд-амбассадор! Она приехала вести прямой эфир
+							своего лимитированного коллаба. Вот уже десять сторис выложила.&nbsp;</p>
+						<p>&ndash; Срочно вызывай на площадку директора по Диджитал, будем спасать ситуацию.</p>
+						<p>Да, такого в моей 20-летней практике ещё не было. Извиняться перед девчонкой, которой ещё
+							работать по законодательству вроде как нельзя. Или можно уже? Да, конечно, можно, у неё
+							активная база в Инстаграме 1,4 миллиона, а в Тик-Токе вообще ого-го. Она приехала вести не
+							только эфир, а всю презентацию. Кстати, за гонорар &laquo;в четверть Урганта&raquo;. И то,
+							только потому, что у неё уже есть годовой контракт с клиентом. (Да я твёрдо уверен, это же
+							как раз половина бюджета на организацию).&nbsp;</p>
+						<p>Как быстро все преобразилось! И почему это меня, специалиста по маркетинговым трендам
+							удивляет? Да потому что куча всего случилась очень быстро. Слишком быстро даже для
+							меня.&nbsp;</p>
+
+						<p>Я видел, как за каких-то десять лет &laquo;сдулось&raquo; потребительское промо. Как за 8 лет
+							сошла &laquo;на нет&raquo; популярность бренд-эвентов. Как лет за пять перестал быть
+							рентабельным Мерчендайзинг.&nbsp;</p>
+						<p>Но пока я и индустрия BTL все это продумывали и пережевывали, буквально у нас под носом, года
+							за три:</p>
+						<ul>
+							<li> потребители из гипермаркетов перебрались в магазины у дома;&nbsp;</li>
+							<li> потом те же граждане все чаще стали выбирать в магазине, а покупать в Интернете;&nbsp;
+							</li>
+							<li> а Интернет тем временем из компьютера переместился в телефоны;&nbsp;</li>
+							<li> сайты сменились приложениями, а те, в мгновение, социальными сетями (да, они реально
+								ищут товары не выходя из Инстаграм!);&nbsp;</li>
+							<li> и в этих социальных сетях правят бал совсем другие селебы от 12 до 18. Ну и редко кто
+								чуть постарше...&nbsp;</li>
+							<li> ...которые продвигают совсем другие бренды - нишевые, странные, глупые, модные в
+								течение месяца...&nbsp;</li>
+							<li> и все это продвигается самыми невероятными способами, среди которых челлендж &ndash;
+								самый понятный.&nbsp;</li>
+						</ul>
+						<p>В размышлениях я пролистываю тематические Телеграм-каналы. Так и есть - доля
+							Интернет-продвижения для косметики превысила уже 35%. Но это средняя температура по
+							больнице. Для молодёжных брендов, принадлежащих корпорациям, затраты на инфлюенсеров и посев
+							контента могут достигать 80% бюджета! Онлайн продажи бытовой техники в России несколько
+							кварталов стабильно опережают офлайн. Одежда преимущественно продаётся через маркетплейсы.
+							Доставки с АлиЭкпресс измеряются в год десятками миллионов и смогли поднять из небытия саму
+							Почту России. Ну и далее по списку. По тому, что выше приводил.&nbsp;</p>
+						<p>А где же теперь заработать на BTL?&nbsp;</p>
+						<p>Не обрадую, но если вы хотите оставаться на плаву, переходите в Новый Дивный Цифровой мир. А
+							точнее, начинайте выстраивать свою гибридную региональную вселенную. Вот прямо с
+							понедельника садитесь штормить и придумывать. Мой рецепт краток, но от того не становится
+							сильно проще.&nbsp;</p>
+						<p>Приведу, чтобы лучше думалось.&nbsp;</p>
+						<ol>
+							<li aria-level="1">Возьмите хорошее знание своего региона.&nbsp;</li>
+							<li aria-level="1">Тщательно просейте интересные события, локации и лидеров мнений в
+								перспективных отраслях.&nbsp;</li>
+							<li aria-level="1">Оцените свежесть используемых концепций и их ценность.&nbsp;</li>
+							<li aria-level="1">Скатайте свои целевые сообщества. Если не хватает навыков - возьмите
+								готовые толковые. Только учтите, что понадобится много времени на разогрев.</li>
+							<li aria-level="1">Налепите из полученного чего-нибудь креативного. Посмотрите со стороны.
+								Подождите, пока невнятное развалится. Перелепите. Важно пробовать и пробовать.&nbsp;
+							</li>
+							<li aria-level="1">Получившийся концентрированный продукт сильно разбавьте цифровым
+								технологиями.&nbsp;</li>
+							<li aria-level="1">Приправьте по вкусу трендами ТикТока и выкладывайте в Сеть.</li>
+						</ol>
+						<p>Ах да. Забыл ещё дописать про то, с чего всё начиналось. Эта чертова фиолетовая помада и есть
+							гвоздь программы, новинка ноября! Как мы это упустили из виду? Куда смотрели? Понятно куда -
+							в прошлое, где люди до 16 - это всего лишь энергичные промоутеры</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="book__comments">
+					<div class="comments__buttons">
+						<button type="button">Комментарии</button>
+						<button type="button"><i class="fa-regular fa-pen-to-square"></i></button>
+					</div>
+
+					<div class="comments__content">
+						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+							aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									...
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="books">
+			<div class="books__header" id="glava3">
+				<div class="books__up__title">Глава 3</div>
+				<div class="books__title">Поднять голову над волной или идти на дно</div>
+				<div class="books__sub__desc"></div>
+			</div>
+
+			<div class="book__content">
+				<div class="container">
+					<div class="book__content__inner">
+						<p>&ndash; Александр, а по-моему, это все лишнее. Зачем нам создавать новые методики и, тем
+							более собственные проекты? Мы уже 10 лет занимаемся праздниками. Всех знаем. Все умеем. Нам
+							надо просто пару продажников взять и мы вернёмся к выполнению плана продаж! &ndash; сказал
+							управляющий партнёр нашего ивент-подразделения Сергей.&nbsp;</p>
+						<p>&ndash; Ну, ещё, может, добавить презентацию с креативными идеями для корпоративов. Опишем
+							сразу 20 идей, чтобы впечатлить клиентов - добавила Татьяна, второй партнёр.&nbsp;</p>
+						<p>Я уже ничего не ответил. Было понятно, что команда застряла в прошлом, где &laquo;все
+							просто&raquo;. И никакие мои пламенные двухчасовые речи о новом подходе и необходимости
+							работать совершенно по-новому ничего не изменят. Инерция казалась непреодолимой и&hellip;
+						</p>
+						<p>Если же вы настроены в следующем году продолжить развитие, не полагаясь на прошлый опыт,
+							ловите рекомендации:&nbsp;</p>
+						<p>За последние годы в связи с бурным развитием сетевого ритейла и, в особенности цифровых
+							коммуникаций, BTL претерпел серьезные изменения. Пандемия и СВО усугубили ситуацию на рынке.
+							Некоторые международные компании ушли с рынка. А значительная их часть сократила инвестиции
+							в свое продвижение. Особенно в разные необязательные активности &laquo;сытых лет&raquo;.
+							Приторможены эксперименты с новыми инструментами, если нет высокой вероятности, что они
+							&laquo;выстрелят&raquo;.&nbsp;</p>
+						<p>BTL в классическом виде продолжает &laquo;проседать&raquo;. Традиционные промо сохранят свою
+							актуальность при решении локальных задач по продвижению новых мест продаж и как поддержка
+							вывода принципиально новых товаров на рынок. Перспективным направлением будут гибридные
+							(digital + btl) инструменты. Например, рекламная кампания в социальных сетях с выдачей
+							поощрений в точках продаж (но совсем не обязательно через промоутеров, возможно и через
+							постаматы). Большой потенциал у различных промо с использованием ресурсов растущих
+							маркетплейсов. Но вряд ли к таким механикам будут привлекать агентства, разве что для
+							оформления креатива.&nbsp;</p>
+						<p>Маркетинг большинства B2C компаний становится все более &laquo;тактическим&raquo;.
+							Потребитель не должен скучать, поэтому растет и ширится использование контент-маркетинга и
+							ситуативного маркетинга тоже. Методики btl (как поддерживающий формат) и тут придутся как
+							нельзя кстати. Измеримость, накопление данных и профессионализм реализации будут критически
+							важны для всех заказчиков btl. Скидок на огрехи промо персонала в новую эпоху не
+							ожидается.&nbsp;</p>
+						<p>В целом сохраняется спрос на &laquo;операционный&raquo; маркетинг и поддержку продаж. Так,
+							рынок мерчендайзинговых услуг сократится менее, чем на 5 процентов. Растёт спрос на
+							внутрироссийский туризм. В том числе повышенным спросом пользуются В2В-мероприятия в
+							интересных незаезженных локациях. Региональные производители активизируются, видя уход
+							крупных игроков и смещение спроса в более низкий ценовой сегмент. Это также шанс нарастить
+							объем продаж</p>
+						<p>ЧТО ВСЕ ЭТО ОЗНАЧАЕТ ДЛЯ РЕГИОНАЛЬНЫХ АГЕНТСТВ? НЕКОТОРЫЕ НОВЫЕ ВОЗМОЖНОСТИ.</p>
+						<p>Вот, чтобы я вам искренне рекомендовал:&nbsp;</p>
+						<ol>
+							<li aria-level="1">Проведите ревизию своего портфеля услуг. Если в нем до сих пор нет
+								мерчендайзинга, самое время исправить этот пробел. В период кризиса это может быть
+								регулярным поддерживающим вас источником дохода.&nbsp;</li>
+							<li aria-level="1">Сфокусируйтесь на формировании и обновлении своих информационных баз. В
+								особенности &ndash; баз локальных ресурсов &ndash; события и места проведения событий,
+								фестивали, интересные новые площадки. Находясь в регионе, вы можете приобрести глубокую
+								экспертизу и выгодно продавать ее международным компаниям и федеральным
+								агентствам.&nbsp;</li>
+							<li aria-level="1">Запустите собственные проекты, например культурные, социальные или
+								спортивные (последнее особенно актуально). Компании сейчас более охотно готовы
+								спонсировать события с уже сформированной аудиторией и уровнем известности.&nbsp;</li>
+							<li aria-level="1">Проведите аудит своего собственного продвижения. И обязательно усильте
+								свое подразделение продаж. Да, рынок проседает, но одновременно с него уходят более
+								слабые игроки. Так что вы по итогам можете весомо вырасти. Активизируйте работу с
+								региональными клиентами и федеральными агентствами.&nbsp;</li>
+							<li aria-level="1">Используйте кризис для обновления и усиления команды. Самое время
+								стимулировать сотрудников на развитие и обучение. А также найти перспективных новых
+								&laquo;звезд&raquo; для развития вашего успеха.</li>
+						</ol>
+						<p>А, чуть не забыл рассказать, чем закончилась история в ивент-подразделении. Тут вас не ждет
+							неожиданных поворотов сюжета и счастливого спасения. Мы все же еще немного поспорили и
+							разошлись на месяц &ndash; подумать. А потом этот отдел закрыли. Зафиксировали небольшие
+							убытки за последние пару кварталов и разошлись.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="book__comments">
+					<div class="comments__buttons">
+						<button type="button">Комментарии</button>
+						<button type="button"><i class="fa-regular fa-pen-to-square"></i></button>
+					</div>
+
+					<div class="comments__content">
+						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+							aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									...
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="books">
+			<div class="books__header" id="glava4">
+				<div class="books__up__title">Глава 4</div>
+				<div class="books__title">Как-то хочется что-то поделать руками. Конфликт креативности, продуктивности и
+					эффективности в жизни менеджера средней полосы</div>
+				<div class="books__sub__desc"></div>
+			</div>
+
+			<div class="book__content">
+				<div class="container">
+					<div class="book__content__inner">
+						<p>- Александр, а давайте сделаем клиентам подарки своими руками? Раскрасим кружки,
+							например!&nbsp;</p>
+						<p>- А что, мы заказать не успеваем?&nbsp;</p>
+						<p>- Нет, но очень хочется сделать что-то руками, самовыразиться&hellip; Я уже и краски
+							купила.&nbsp;</p>
+						<p>В первое мгновение идея мне показалась странной. Но &laquo;зарубать&raquo; идею Ларисы я не
+							стал. Сказал, - подумаю.</p>
+						<p>Большинство сотрудников маркетинговых агентств жалуются на рутину. По данным российских
+							исследователей до 93%. И это в самой, казалось бы, &laquo;разнообразной&raquo; сфере.
+							Распространённое мнение &laquo;эх если бы моя работа была более креативной&raquo;! Но это
+							типичная ошибка восприятия &laquo;изнутри&raquo;. На самом деле объём новых, энергозатратных
+							задач на многих позициях настолько велик, что мозг в какой-то момент просто перестает
+							справляться. Возникает фрустрация, а следом и пресловутое профессиональное выгорание. И тем
+							быстрее, чем сложнее и разнонаправленные поступающие задачи. Конечно, если заниматься ими
+							всерьёз.&nbsp;</p>
+						<p>За время работы я выяснил, что количество энергии на принятие решений, которое нам отводится
+							в день, ограничено. И это практически фиксированное число, которое зависит от особенностей
+							мозга. И никак не зависит от сложности принимаемых решений. Именно поэтому
+							высокопоставленные руководители первым делом берут себе личного ассистента. А то и не
+							одного. Консультанты по управлению прогнозируют рост производительности руководителя на 30%
+							за счёт ввода ставки помощника. Что можно ему передать: ведение календаря, контроль
+							поставленных задач, подготовку протокола встреч и ещё массу обязательных, но не сложных
+							функций. Время, потраченное на интеллектуальную работу и результативность слабо связаны. У
+							меня бывают очень продуктивные часы, которые стоят иной рабочей недели. Короткие периоды,
+							когда ты ловишь состояние потока и создаёшь новое и полезное, пока не устала писать
+							рука.&nbsp;</p>
+						<ul>
+							<li aria-level="1">От чего зависит продуктивность?</li>
+							<li aria-level="1">Как воспроизвести подходящие условия?</li>
+							<li aria-level="1">Что вызывает фрустрацию?</li>
+						</ul>
+						<p>Чередование слишком разных задач, слишком большое число задач, отсутствие рефлексии, не
+							фиксация достижений. В общем, то, что называется &laquo;рутина поглотила&raquo;. А в основе
+							всего &ndash; переоценка своей продуктивности в условиях, когда не верно распределяешь своё
+							время и внимание. Увы, в школе и вузе этому не учат. Приходится разбираться самому.</p>
+						<p>Поделюсь своими практическими &laquo;открытиями&raquo;. Я ранжирую свои задачи на
+							стратегическое, креативные, регулярные и рутинные. К каждой нужен свой подход и метод.</p>
+						<ol>
+							<li aria-level="1">Долгосрочное планирование. Вынесение стратегических сессий на полностью
+								освобождённый от операционных задач день. Важно, чтобы никто не отвлекал в это
+								время.&nbsp;</li>
+							<li aria-level="1">&nbsp;Лимит на сложные задачи в течение дня (оптимистично, если удастся
+								решить 3) и концентрация только на их решении. В идеале решать их в начале дня, оставляя
+								&laquo;мелочь&raquo; на потом.&nbsp;</li>
+							<li aria-level="1">Работа с коучем для коррекции повторяющиеся негативных сценариев и
+								ошибок. В первую очередь пресловутой &laquo;прокрастинации&raquo;. Я лично начал
+								практиковать недавно, но уже нравится.&nbsp;</li>
+							<li aria-level="1">Работу с ментором для прояснения неосознанных некомпетенций и понимания
+								границ достижимого. Скажу честно, пока моими менторами были успешные клиенты и партнеры,
+								которые помогали мне советами, но не на профессиональной основе.&nbsp;</li>
+							<li aria-level="1">Общение в кругу профессионалов для обмена лайфхаками. Большинство
+								специалистов российских этим общением пренебрегают. А зря.&nbsp;</li>
+							<li aria-level="1">Работа с трекером для постановки и дополнительного внешнего контроля
+								прогресса исполнения задач. Как альтернатива - мастермайнд группы.&nbsp;</li>
+							<li aria-level="1">Регламентация повторяющихся рабочих задач. Определение графика регулярных
+								встреч с сотрудниками.&nbsp;</li>
+							<li aria-level="1">Ограничение времени встреч, статусов. В первую очередь за счёт подготовки
+								встречи, определения участников и их вклада.&nbsp;</li>
+							<li aria-level="1">Быстрое решение накопившихся рутинных задач. Для меня это максимальное
+								устранение отвлекающих факторов. И что немаловажно &ndash; отключение ненужной
+								рефлексии.&nbsp;</li>
+							<li aria-level="1">Делегирование. Да-да, пресловутое делегирование. Всегда, есть что
+								перепоручить без потери качества.&nbsp;</li>
+							<li aria-level="1">Эффект дедлайна. Ограничение срока на выполнение задачи определённым
+								временем (не путать с работой в авральном режиме). Мне очень помогает и позволяет
+								сконцентрироваться.&nbsp;</li>
+							<li aria-level="1">Использование ручки и листов бумаги. Один мой приятель, сдающий под сотню
+								квартир использует для планирования аренды именно листы. Так наглядней и
+								эффективней.&nbsp;</li>
+							<li aria-level="1">Автоматизация рутинных функций. Например, подготовка смет, сведение
+								отчётов, использование планировщиков.&nbsp;</li>
+							<li aria-level="1">Разумное ограничение рабочего времени. Большинство состоявшихся успешных
+								предпринимателей работают порядка 30 часов в неделю.&nbsp;</li>
+							<li aria-level="1">Пресловутая работа руками. Время от времени нужно делать что-то очень
+								простое и понятное. С мгновенным результатом.</li>
+						</ol>
+						<p>Последний пункт как раз о серьезном изменении сути выполняемой работы. Ну и о корпоративных
+							связях. В общем, к концу дня мы взялись всем офисом раскрашивать кружки.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="book__comments">
+					<div class="comments__buttons">
+						<button type="button">Комментарии</button>
+						<button type="button"><i class="fa-regular fa-pen-to-square"></i></button>
+					</div>
+
+					<div class="comments__content">
+						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+							aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									...
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="books">
+			<div class="books__header" id="glava5">
+				<div class="books__up__title">Глава 5</div>
+				<div class="books__title">Новый Год, волшебные записки и я 20 лет назад</div>
+				<div class="books__sub__desc"></div>
+			</div>
+
+			<div class="book__content">
+				<div class="container">
+					<div class="book__content__inner">
+						<ul>
+							<li aria-level="1">А у меня для вас необычные пожелания. Держите. - С этими словами Наталья
+								протянула мне несколько &laquo;записок&raquo;.&nbsp;</li>
+						</ul>
+						<p>Так необычно вдруг пошло празднование 2002 года в офисе. Я и весь тогда небольшой коллектив
+							нашего BTL-агентства были заинтригованы. Что такого могла пожелать нам коллега из
+							федерального агентства. Успехов? Новых нежадных клиентов? Предоплат в 100%? Тем более, что
+							волею судеб Наталья на полгода превратилась в мою подчиненную. Но об этом позже.</p>
+						<p>Не без волнения я развернул первую записку. Там аккуратным почерком было написано
+							&laquo;Открыть офис в Москве&raquo;. Во второй &ndash; &laquo;Найти регионального
+							представителя в Питере&raquo;, &laquo;Сменить название&raquo; А вот что было в следующих
+							двух уже не помню.&nbsp;</p>
+						<p>За давностью времён и под влиянием эффекта (или аффекта). Ну какой там офис в Москве? Зачем?
+							Кто нас там ждёт? Как и кто там будет работать? Мы здесь едва на аренду полуподвала с
+							крысами наскребаем... А название чем плохо? У нас гениальное название, такое же как у одного
+							из главных рекламных агентств (тогда мне это совсем не казалась странным или смешным).&nbsp;
+						</p>
+						<p>В общем, не понял я Наталью. Да и не только я. Все были озадачены. Поздравление оказалась
+							неожиданным, как она и предупреждала. Неожиданным и пророческим.&nbsp;</p>
+						<p>Пару лет спустя мы из РА &laquo;АДВ&raquo; стали Ace Target. Ещё через два года открыли офис
+							в Москве (без крыс уже, но зато с кондиционерами вовнутрь, в торговом комплексе
+							&laquo;Олимпийский&raquo;). Ещё через два &ndash; у агентства появился целый офис в
+							Санкт-Петербурге. В общем, все пожелания волшебным образом сбылись.</p>
+						<p>Хотя нет, не волшебным. В промежутках между &laquo;сбычей мечт&raquo; мы много и напряжённо
+							работали, провели сотни проектов и десяток не так чтобы хорошо, копили и раздавали долги,
+							пару раз чуть не обанкротились, пережили смену команды и много всего разного.&nbsp;</p>
+						<p>Приятно думать, что предсказания Натальи были пророческими. И спасибо ей за это. Но не менее
+							важным стал вывод. &laquo;Не всегда мы можем правильно понять смысл сказанного нам&raquo;. И
+							как только вы сталкиваетесь с такой ситуацией, останавливайтесь и начинайте думать. Почему
+							это мне кажется странным и непонятным. Скорее всего жизнь готовит вас к переходу на другой
+							виток спирали развития. И чем скорее вы расшифруете это послание, тем быстрее продвинетесь
+							вперёд.&nbsp;</p>
+						<p>Я в состоянии &laquo;10 лет назад&raquo; уже пригласил бы Наталью на обед, чтобы подробно
+							расспросить ее о &laquo;странных пожеланиях&raquo;. Я нынешний уже сам индицирую встречу с
+							экспертами рынка и клиентами, чтобы нарисовать контуры будущего для компании. Честно скажу
+							&ndash; до сих пор это даётся мне через преодоление внутренних зажимов, но уже намного
+							легче. И каждая такая встреча, пожалуй, одна из самых ценных инвестиций в развитие.</p>
+						<p>Подумайте, какие инструменты и практики для развития и долгосрочного планирования вы
+							используете? И начните в новом году обязательно применять чтото из списка:</p>
+						<ol>
+							<li aria-level="1">Стратегическая сессия с участием основных сотрудников. Желательно с
+								полным отключением от текучки, на целый день и внешним модератором.</li>
+							<li aria-level="1">Интервью с ключевыми клиентами. С хорошим доброжелательным
+								&laquo;журналистом&raquo; и продуманными вопросами, которые будут интересны для
+								опрашиваемых</li>
+							<li aria-level="1">Сессия с внешними экспертами. Хорошо бы привлечь кого-то, кто работал
+								&laquo;внутри&raquo; ваших целевых клиентов, кого-то из смежных отраслей, например,
+								Ритейла. Ну и пригласить кого-либо из РАМУ или федерального агентства - хорошая идея.
+							</li>
+							<li aria-level="1">Внешний аудит компании (представителями отрасли или экспертами по b2b).
+								Таких предложений на рынке на удивление много.</li>
+							<li aria-level="1">Работа с консультантами по стратегии, организационной структуре,
+								продвижению, продажам. Наверное, самая дорогая в списке идей. Но с неё проще всего
+								начать.</li>
+						</ol>
+						<p>Ace Target сейчас использует весь инструментарий из списка. И новый директор компании обещает
+							ещё что-то подкинуть из продвинутых американских практик.</p>
+						<p>И да, чуть не забыл про историю с Натальей. Нам совершенно случайно удалось ее привлечь на
+							управление одним из первых наших крупных проектов. Она приехала в Нижний Новгород помочь
+							родителям с оформлением земельного участка и подзадержалась. </p>
+						<p>В итоге вела у нас 15 регионов проекта. &laquo;Менеджерила&raquo; полгода в перерывах между
+							работами в лидирующих российских агентствах. Кем она была для нас? Коучем? Тренером?
+							Консультантом с погружением? Просто человеком, который помог поднять планку притязаний и
+							прокачать умения? Наверное, всем понемногу. И огромное ей спасибо за это.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="book__comments">
+					<div class="comments__buttons">
+						<button type="button">Комментарии</button>
+						<button type="button"><i class="fa-regular fa-pen-to-square"></i></button>
+					</div>
+
+					<div class="comments__content">
+						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+							aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									...
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="history">
+			<div class="history__content">
+				<div class="history__items">
+					<div class="history__item"><a href="#">История 1... <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+					<div class="history__item"><a href="#">История 1... <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+					<div class="history__item"><a href="#">История 1... <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+					<div class="history__item"><a href="#">История 1... <i class="fa-solid fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div class="history__btn">Похожии истории</div>
+			</div>
+		</div>
+	</main>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
