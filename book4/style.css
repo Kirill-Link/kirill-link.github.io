@@ -1,0 +1,967 @@
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('img/bg.jpg') no-repeat center;
+    /* Центрируем фон, убираем повторение */
+    background-size: cover;
+    /* Изображение растягивается, сохраняя пропорции */
+    z-index: 1;
+    color: #fff;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 197, 227, 0.5);
+    /* Полупрозрачное черное затемнение */
+    z-index: 2;
+    /* Затемнение выше фона */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Полупрозрачное черное затемнение */
+    z-index: 2;
+    /* Затемнение выше фона */
+}
+
+
+header * {
+    position: relative;
+    z-index: 3;
+    /* Контент выше затемнения */
+}
+
+
+.header__wrapper {
+    max-width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/*  NAVIGATION */
+.navigation {
+    position: relative;
+    z-index: 5;
+    width: 80%;
+    margin: 40px auto 0 auto;
+
+}
+
+.navigation__items {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navigation__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation__button {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navigation__button a {
+    text-decoration: none;
+    color: #D47F63;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.navigation__button a i {
+    font-size: 30px;
+}
+
+
+.chapters__header {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.chapters__header__title {
+    font-size: 35px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.chapters__header__link-closed {
+    font-size: 35px;
+    color: #fff;
+}
+
+.chapters__header__link-closed:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navigation__content {
+    width: 100vw;
+    z-index: 6;
+    position: fixed;
+    top: -120%;
+    left: 0;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: top 0.5s ease;
+}
+
+
+.books__chapters {
+    width: 80%;
+    margin: 60px auto;
+    overflow-y: auto;
+    max-height: calc(100vh - 56px);
+}
+
+.chapters__items {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: 80px; */
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+}
+
+
+.chapter__item.active {
+    background-color: #D47F63;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+
+/* Общий стиль для блока */
+.chapter__item {
+    width: 18%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-right: 2%;
+
+    padding: 40px;
+    border-radius: 26px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+@media(max-width:1300px) {
+    .chapter__item {
+        width: 23%;
+    }
+    
+}
+
+@media(max-width:1200px) {
+    .chapter__item {
+        width: 48%;
+    }   
+}
+
+@media(max-width:630px) {
+    .chapter__item {
+        width: 100%;
+    }   
+}
+
+/* Заголовок, показывается изначально */
+.chapter__number {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.chapter__title {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+    transition: opacity 0.3s ease;
+}
+
+/* Описание, скрыто изначально */
+.chapter__desc {
+    font-size: 16px;
+    line-height: 1.4;
+    opacity: 0;
+    /* Описание невидимо */
+    /* visibility: hidden; */
+    /* Скрыто для взаимодействия */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    /* Совпадает с отступами родителя */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.chapter__item:hover .chapter__title {
+
+    text-decoration: none;
+}
+
+.chapter__item:hover {
+    text-decoration: none;
+}
+
+/* .chapter__item:hover .chapter__desc {
+    opacity: 1;
+    visibility: visible;
+    text-decoration: none;
+
+} */
+
+
+
+
+
+
+
+.page__navigarion__content {
+    width: 100vw;
+    z-index: 7;
+    position: fixed;
+    top: 0%;
+    right: -120%;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: right 0.5s ease;
+    display: flex;
+    justify-content: end;
+}
+
+.page__navigation__closed {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.page__navigations {
+    width: 20%;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+@media(max-width:800px) {
+    .page__navigations {
+        width: 40%;
+
+    }
+}
+
+@media(max-width:510px) {
+    .page__navigations {
+        width: 70%;
+
+    }
+}
+
+
+.page__navigations__items {
+    margin-top: 50px;
+}
+
+.page__navigation__item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    padding-left: 40px;
+}
+
+.page__navigation__item a {
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*  NAVIGATION */
+
+
+
+
+.header__title {
+    margin: 0;
+}
+
+
+.heder__items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.header__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    font-size: 9vh;
+    margin-bottom: 40px;
+}
+
+.header__title span {
+    display: block;
+    font-size: 7vh;
+    margin: 10px;
+    color: #D47F63;
+}
+
+@media(max-width:1143px) {
+    .header__title {
+        font-size: 8vh;
+    }
+
+    .header__title span {
+        font-size: 6vh;
+    }
+}
+
+
+
+.header__gallery {
+    width: 47%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+
+.header__gallery img {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+    /* Скрываем все изображения с классом "hidden" */
+}
+
+.header__desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47%;
+    height: 300px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 25px;
+    color: #000;
+    position: relative;
+}
+
+.header__desc::before {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    content: '\201c';
+    font-size: 100px;
+}
+
+.header__desc::after {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    content: '\201d';
+    font-size: 100px;
+}
+
+
+.header__down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 80px;
+    position: absolute;
+    left: 46%;
+    bottom: 7%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: breathe 1.5s infinite ease-in-out;
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1);
+        /* Исходный размер */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Увеличение размера на вдохе */
+    }
+}
+
+.header__down i {
+    font-size: 25px;
+    color: #fff;
+}
+
+
+@media(max-width:1103px) {
+    .header__gallery {
+        display: none;
+    }
+
+    .header__desc {
+        width: 100%;
+        height: 250px;
+    }
+
+    .header__desc::before {
+        top: 2%;
+        left: 2%;
+    }
+
+    .header__desc::after {
+        right: 2%;
+        bottom: -15%;
+    }
+}
+
+@media(max-width:1017px) {
+    .header__title {
+        font-size: 7vh;
+    }
+}
+
+@media(max-width:890px) {
+    .header__title {
+        font-size: 6vh;
+    }
+
+    .header__title span {
+        font-size: 5vh;
+    }
+}
+
+@media(max-width:763px) {
+    .header__title {
+        font-size: 5vh;
+    }
+
+    .header__title span {
+        font-size: 4vh;
+    }
+}
+
+@media(max-width:636px) {
+    .header__title {
+        font-size: 4vh;
+    }
+
+    .header__title span {
+        font-size: 3vh;
+    }
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    /* Секции выше header */
+    background: #f2f2f2;
+    /* padding: 100px 20px; */
+    margin-top: 100vh;
+    /* Секции начинаются после header */
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+    /* Эффект наложения */
+}
+
+.container {
+    max-width: 770px;
+    margin: 0 auto;
+}
+
+@media(max-width:1020px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media(max-width:550px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+
+
+.books__header {
+    position: relative;
+    /* Для наложения затемнения */
+    background: url('img/glav-bg.jpg') no-repeat center center;
+    /* Фон без повторений и по центру */
+    background-size: cover;
+    /* Растягиваем изображение, сохраняя пропорции */
+    height: 100%;
+    padding: 100px 0;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: 100000000;
+}
+
+.books__header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 197, 227, 0.5);
+    /* Полупрозрачное черное затемнение */
+    z-index: 1;
+    /* Затемнение выше фона */
+}
+
+.books__header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Полупрозрачное черное затемнение */
+    z-index: 1;
+    /* Затемнение выше фона */
+}
+
+
+.books__header * {
+    position: relative;
+    z-index: 2;
+    /* Контент выше затемнения */
+}
+
+
+
+.books__up__title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+    opacity: .7;
+}
+
+.books__title {
+    width: 80%;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.books__sub__desc {
+    width: 50%;
+    font-size: 18px;
+}
+
+
+.books_content__title {
+    font-size: 35px;
+    margin: 25px 0;
+    font-weight: bold;
+}
+
+
+
+.book__content__inner {
+    padding-bottom: 15px;
+    z-index: 100000000;
+    position: relative;
+}
+
+.book__content__inner p,
+.book__content__inner li {
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.book__content__inner img {
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.book__comments {
+    padding-bottom: 40px;
+}
+
+.book__comments button {
+    outline: none;
+    border: 0;
+    background-color: #D47F63;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.book__comments button:first-child {
+    width: 80%;
+    margin-right: 1%;
+}
+
+.book__comments button:last-child {
+    width: 18%;
+}
+
+
+@media(max-width: 1100px) {
+    .books__sub__desc {
+        width: 90%;
+    }
+}
+
+@media(max-width:550px) {
+    .books__title {
+        font-size: 30px;
+    }
+
+    .books__sub__desc {
+        width: 90%;
+    }
+}
+
+
+
+/* background-color: #D47F63; */
+
+.history {
+    position: fixed;
+    top: 50%;
+    z-index: 20000000000000000;
+}
+
+@media(max-width:620px) {
+    .history {
+        display: none;
+    }
+}
+
+.history__content {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    transition: transform 0.5s ease;
+    transform: translateX(-300px);
+}
+
+.history__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+}
+
+
+.history__btn {
+    background-color: #D47F63;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -40%;
+    top: 40%;
+    bottom: 0;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+.history__item {
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.history__item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+
+.history__item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-decoration: none;
+    color: #000;
+}
+
+
+.quote {
+    background-color: #fff;
+    font-weight: bold;
+    font-style: italic;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.quote::before {
+    content: '\201c';
+    position: absolute;
+    font-size: 50px;
+    left: 2%;
+    top: 50%;
+}
+
+.quote::after {
+    content: '\201d';
+    font-size: 50px;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+}
+
+@media(max-width: 950px) {
+    .quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .quote::before {display: flex; justify-content:center; position: inherit; font-size: 30px;}
+    .quote::after {display: flex; justify-content:center; position: inherit; font-size: 30px;}
+}
+
+
+.comment__form {
+    height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Сдвиг вверх */
+    overflow: hidden;
+    /* Чтобы содержимое не выходило за границы */
+    transition: all 0.3s ease;
+    /* Плавность */
+    margin-bottom: 0;
+    /* Чтобы убрать отступы, пока форма скрыта */
+}
+
+.comment__form.active {
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+    /* Возврат в исходное положение */
+    margin-bottom: 40px;
+    /* Добавляем отступ при раскрытии */
+}
+
+
+.people__comments {
+    height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Сдвиг вверх */
+    overflow: hidden;
+    /* Чтобы содержимое не выходило за границы */
+    transition: all 0.3s ease;
+    /* Плавность */
+    margin-bottom: 0;
+    /* Чтобы убрать отступы, пока форма скрыта */
+}
+
+.people__comments.people-active {
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+    /* Возврат в исходное положение */
+    margin-bottom: 40px;
+    /* Добавляем отступ при раскрытии */
+}
+
+
+
+.comment__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.comment__header input {
+    width: 73%;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+.comment__header select {
+    width: 25%;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.comment__content {
+    margin-bottom: 20px;
+}
+
+.comment__content textarea {
+    display: block;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    border: 0;
+    outline: none;
+    border-radius: 15px;
+}
+
+.comment__send {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+
+    color: #fff;
+    background-color: #D47F63;
+    border-radius: 15px;
+}
+
+.people__comments {
+    margin-bottom: 40px;
+}
+
+
+@media(max-width: 470px) {
+    .comments__buttons button:first-child {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .comments__buttons button:last-child {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+.comments_swiper .swiper-slide {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.comments__slider__header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D47F63;
+}
+
+.swiper-pagination-bullet-active {
+    background: #D47F63 !important;
+}
+
+
+.random-img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    backdrop-filter: blur(8px);
+    opacity: .5;
+}
+
+@media(max-width: 540px) {
+    .comment__header {
+        flex-direction: column;
+    }
+
+    .comment__header input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .comment__header select {
+        width: 100%;
+    }
+}
