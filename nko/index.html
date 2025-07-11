@@ -33,7 +33,7 @@
         async function loadAndRenderTable() {
             try {
                 // Загружаем JSON
-                const response = await fetch('/nko.json');
+                const response = await fetch('nko.json');
                 if (!response.ok) throw new Error('Файл nko.json не найден');
                 const data = await response.json();
 
