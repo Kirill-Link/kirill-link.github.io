@@ -11,6 +11,7 @@
         .score-red { background-color: #F44336; color: white; }
         .table-container { max-width: 100%; overflow-x: auto; }
         th, td { white-space: normal; word-wrap: break-word; }
+        .sortable:hover { cursor: pointer; background-color: #0277BD; }
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -35,7 +36,14 @@
                 // Загружаем JSON
                 const response = await fetch('nko.json');
                 if (!response.ok) throw new Error('Файл nko.json не найден');
-                const data = await response.json();
+                let data = await response.json();
+
+                // Сортируем по Рейтинговый_балл по убыванию
+                data.sort((a, b) => {
+                    const scoreA = a.Анализ && a.Анализ.Рейтинговый_балл || 0;
+                    const scoreB = b.Анализ && b.Анализ.Рейтинговый_балл || 0;
+                    return scoreB - scoreA;
+                });
 
                 // Находим максимальное количество упоминаний и деталей
                 let maxUrls = 0;
@@ -52,10 +60,11 @@
 
                 // Формируем заголовки
                 const headers = [
-                    'НКО', 'ИНН', 'Город', 'Адрес',
-                    'Социальная_значимость', 'Креативность', 'Вовлечённость', 'Потенциал_масштабирования', 
-                    'Реалистичность', 'Результат_проверки', 'Рейтинговый_балл', 'Комментарий_рейтинга',
-                    'Балл_за_упоминания', 'Сентимент_упоминаний'
+                    '№', 'НКО', 'ИНН', 'Город', 'Адрес',
+                    'Социальная_значимость', 'Креативность', 'Вовлечённость', 
+                    'Потенциал_масштабирования', 'Реалистичность', 'Результат_проверки', 
+                    'Рейтинговый_балл', 'Комментарий_рейтинга', 'Балл_за_упоминания', 
+                    'Сентимент_упоминаний'
                 ];
                 // Добавляем заголовки для Упоминаний
                 for (let i = 1; i <= maxUrls; i++) {
@@ -82,19 +91,25 @@
 
                 // Рендерим заголовки
                 const thead = document.querySelector('#nkoTable thead tr');
-                headers.forEach(header => {
+                headers.forEach((header, index) => {
                     const th = document.createElement('th');
                     th.className = 'px-4 py-2 text-left font-bold border border-gray-300';
+                    if (header === 'Рейтинговый_балл') {
+                        th.classList.add('sortable');
+                        th.dataset.sortOrder = 'desc';
+                        th.addEventListener('click', () => toggleSort(data, header));
+                    }
                     th.textContent = header;
                     thead.appendChild(th);
                 });
 
                 // Рендерим строки
                 const tbody = document.querySelector('#nkoTable tbody');
-                data.forEach(item => {
+                data.forEach((item, index) => {
                     const row = document.createElement('tr');
                     const analysis = item.Анализ || {};
                     const rowData = {
+                        '№': index + 1,
                         НКО: item.НКО || '',
                         ИНН: item.ИНН || '',
                         Город: item.Город || '',
@@ -168,6 +183,96 @@
                 errorDiv.textContent = `Ошибка: ${error.message}`;
                 errorDiv.classList.remove('hidden');
             }
+        }
+
+        function toggleSort(data, header) {
+            const tbody = document.querySelector('#nkoTable tbody');
+            tbody.innerHTML = '';
+            const th = document.querySelector(`th.sortable`);
+            const order = th.dataset.sortOrder === 'desc' ? 'asc' : 'desc';
+            th.dataset.sortOrder = order;
+
+            // Сортировка
+            data.sort((a, b) => {
+                const scoreA = a.Анализ && a.Анализ[header] || 0;
+                const scoreB = b.Анализ && b.Анализ[header] || 0;
+                return order === 'desc' ? scoreB - scoreA : scoreA - scoreB;
+            });
+
+            // Перерендерим строки
+            data.forEach((item, index) => {
+                const row = document.createElement('tr');
+                const analysis = item.Анализ || {};
+                const rowData = {
+                    '№': index + 1,
+                    НКО: item.НКО || '',
+                    ИНН: item.ИНН || '',
+                    Город: item.Город || '',
+                    Адрес: item.Адрес || '',
+                    Социальная_значимость: analysis.Социальная_значимость || '',
+                    Креативность: analysis.Креативность || '',
+                    Вовлечённость: analysis.Вовлечённость || '',
+                    Потенциал_масштабирования: analysis.Потенциал_масштабирования || '',
+                    Реалистичность: analysis.Реалистичность || '',
+                    Результат_проверки: analysis.Результат_проверки || '',
+                    Рейтинговый_балл: analysis.Рейтинговый_балл || '',
+                    Комментарий_рейтинга: analysis.Комментарий_рейтинга || '',
+                    Балл_за_упоминания: analysis.Балл_за_упоминания || '',
+                    Сентимент_упоминаний: analysis.Сентимент_упоминаний || ''
+                };
+
+                const urls = Array.isArray(analysis.Упоминания) ? analysis.Упоминания : [];
+                for (let i = 1; i <= 8; i++) {
+                    rowData[`Упоминание_${i}`] = urls[i-1] || '';
+                }
+
+                const details = typeof analysis.Детализация_рейтинга === 'string' 
+                    ? analysis.Детализация_рейтинга.split('; ') 
+                    : [];
+                const detailNames = [
+                    'Детализация_постановки', 'Детализация_участники', 'Детализация_показы',
+                    'Детализация_СМИ', 'Детализация_гранты', 'Детализация_доп1', 'Детализация_доп2'
+                ];
+                for (let i = 0; i < 5; i++) {
+                    const key = detailNames[i] || `Детализация_доп${i+1}`;
+                    rowData[key] = details[i] || '';
+                }
+
+                const extraFields = ['Комментарий_к_креативности', 'Комментарий_к_вовлечённости', 
+                                    'Комментарий_к_масштабированию', 'Комментарий_к_реалистичности'];
+                extraFields.forEach(field => {
+                    rowData[field] = analysis[field] || '';
+                });
+
+                headers.forEach(header => {
+                    const td = document.createElement('td');
+                    td.className = 'px-4 py-2 border border-gray-300';
+                    const value = rowData[header];
+
+                    const scoreFields = ['Креативность', 'Вовлечённость', 'Потенциал_масштабирования', 
+                                        'Реалистичность', 'Рейтинговый_балл', 'Балл_за_упоминания'];
+                    if (scoreFields.includes(header) && !isNaN(value) && value !== '') {
+                        const score = parseFloat(value);
+                        if (score >= 5) td.classList.add('score-green');
+                        else if (score >= 3) td.classList.add('score-yellow');
+                        else td.classList.add('score-red');
+                    }
+
+                    if (header.startsWith('Упоминание_') && value) {
+                        const a = document.createElement('a');
+                        a.href = value;
+                        a.textContent = value;
+                        a.className = 'text-blue-500 hover:underline';
+                        a.target = '_blank';
+                        td.appendChild(a);
+                    } else {
+                        td.textContent = value;
+                    }
+
+                    row.appendChild(td);
+                });
+                tbody.appendChild(row);
+            });
         }
 
         // Загружаем таблицу при загрузке страницы
