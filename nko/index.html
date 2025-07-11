@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ НКО</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .score-green { background-color: #4CAF50; color: white; }
+        .score-yellow { background-color: #FFCA28; color: black; }
+        .score-red { background-color: #F44336; color: white; }
+        .table-container { max-width: 100%; overflow-x: auto; }
+        th, td { white-space: normal; word-wrap: break-word; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold text-center mb-4">Анализ НКО</h1>
+        <div id="error" class="hidden text-red-600 text-center mb-4"></div>
+        <div class="table-container">
+            <table id="nkoTable" class="min-w-full bg-white shadow-md rounded-lg">
+                <thead>
+                    <tr class="bg-blue-600 text-white">
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        async function loadAndRenderTable() {
+            try {
+                // Загружаем JSON
+                const response = await fetch('/nko.json');
+                if (!response.ok) throw new Error('Файл nko.json не найден');
+                const data = await response.json();
+
+                // Находим максимальное количество упоминаний и деталей
+                let maxUrls = 0;
+                let maxDetails = 0;
+                data.forEach(item => {
+                    const analysis = item.Анализ || {};
+                    maxUrls = Math.max(maxUrls, Array.isArray(analysis.Упоминания) ? analysis.Упоминания.length : 0);
+                    maxDetails = Math.max(maxDetails, 
+                        typeof analysis.Детализация_рейтинга === 'string' 
+                            ? analysis.Детализация_рейтинга.split('; ').length 
+                            : 0
+                    );
+                });
+
+                // Формируем заголовки
+                const headers = [
+                    'НКО', 'ИНН', 'Город', 'Адрес',
+                    'Социальная_значимость', 'Креативность', 'Вовлечённость', 'Потенциал_масштабирования', 
+                    'Реалистичность', 'Результат_проверки', 'Рейтинговый_балл', 'Комментарий_рейтинга',
+                    'Балл_за_упоминания', 'Сентимент_упоминаний'
+                ];
+                // Добавляем заголовки для Упоминаний
+                for (let i = 1; i <= maxUrls; i++) {
+                    headers.push(`Упоминание_${i}`);
+                }
+                // Добавляем заголовки для Детализация_рейтинга
+                const detailNames = [
+                    'Детализация_постановки', 'Детализация_участники', 'Детализация_показы',
+                    'Детализация_СМИ', 'Детализация_гранты', 'Детализация_доп1', 'Детализация_доп2'
+                ];
+                for (let i = 0; i < maxDetails; i++) {
+                    headers.push(detailNames[i] || `Детализация_доп${i+1}`);
+                }
+                // Добавляем дополнительные поля (например, комментарии)
+                const extraFields = new Set();
+                data.forEach(item => {
+                    Object.keys(item.Анализ || {}).forEach(key => {
+                        if (!headers.includes(key) && key !== 'Упоминания' && key !== 'Детализация_рейтинга') {
+                            extraFields.add(key);
+                        }
+                    });
+                });
+                headers.push(...extraFields);
+
+                // Рендерим заголовки
+                const thead = document.querySelector('#nkoTable thead tr');
+                headers.forEach(header => {
+                    const th = document.createElement('th');
+                    th.className = 'px-4 py-2 text-left font-bold border border-gray-300';
+                    th.textContent = header;
+                    thead.appendChild(th);
+                });
+
+                // Рендерим строки
+                const tbody = document.querySelector('#nkoTable tbody');
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+                    const analysis = item.Анализ || {};
+                    const rowData = {
+                        НКО: item.НКО || '',
+                        ИНН: item.ИНН || '',
+                        Город: item.Город || '',
+                        Адрес: item.Адрес || '',
+                        Социальная_значимость: analysis.Социальная_значимость || '',
+                        Креативность: analysis.Креативность || '',
+                        Вовлечённость: analysis.Вовлечённость || '',
+                        Потенциал_масштабирования: analysis.Потенциал_масштабирования || '',
+                        Реалистичность: analysis.Реалистичность || '',
+                        Результат_проверки: analysis.Результат_проверки || '',
+                        Рейтинговый_балл: analysis.Рейтинговый_балл || '',
+                        Комментарий_рейтинга: analysis.Комментарий_рейтинга || '',
+                        Балл_за_упоминания: analysis.Балл_за_упоминания || '',
+                        Сентимент_упоминаний: analysis.Сентимент_упоминаний || ''
+                    };
+
+                    // Обрабатываем Упоминания
+                    const urls = Array.isArray(analysis.Упоминания) ? analysis.Упоминания : [];
+                    for (let i = 1; i <= maxUrls; i++) {
+                        rowData[`Упоминание_${i}`] = urls[i-1] || '';
+                    }
+
+                    // Обрабатываем Детализация_рейтинга
+                    const details = typeof analysis.Детализация_рейтинга === 'string' 
+                        ? analysis.Детализация_рейтинга.split('; ') 
+                        : [];
+                    for (let i = 0; i < maxDetails; i++) {
+                        const key = detailNames[i] || `Детализация_доп${i+1}`;
+                        rowData[key] = details[i] || '';
+                    }
+
+                    // Добавляем дополнительные поля
+                    extraFields.forEach(field => {
+                        rowData[field] = analysis[field] || '';
+                    });
+
+                    // Рендерим ячейки
+                    headers.forEach(header => {
+                        const td = document.createElement('td');
+                        td.className = 'px-4 py-2 border border-gray-300';
+                        const value = rowData[header];
+                        
+                        // Подсветка числовых оценок
+                        const scoreFields = ['Креативность', 'Вовлечённость', 'Потенциал_масштабирования', 
+                                            'Реалистичность', 'Рейтинговый_балл', 'Балл_за_упоминания'];
+                        if (scoreFields.includes(header) && !isNaN(value) && value !== '') {
+                            const score = parseFloat(value);
+                            if (score >= 5) td.classList.add('score-green');
+                            else if (score >= 3) td.classList.add('score-yellow');
+                            else td.classList.add('score-red');
+                        }
+
+                        // Делаем ссылки кликабельными
+                        if (header.startsWith('Упоминание_') && value) {
+                            const a = document.createElement('a');
+                            a.href = value;
+                            a.textContent = value;
+                            a.className = 'text-blue-500 hover:underline';
+                            a.target = '_blank';
+                            td.appendChild(a);
+                        } else {
+                            td.textContent = value;
+                        }
+
+                        row.appendChild(td);
+                    });
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                const errorDiv = document.getElementById('error');
+                errorDiv.textContent = `Ошибка: ${error.message}`;
+                errorDiv.classList.remove('hidden');
+            }
+        }
+
+        // Загружаем таблицу при загрузке страницы
+        window.onload = loadAndRenderTable;
+    </script>
+</body>
+</html>
