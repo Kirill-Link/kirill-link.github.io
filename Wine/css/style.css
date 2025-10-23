@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Good Vibes Pro';
-    src: url('/fonts/GoodVibesPro.eot');
+    src: url('../fonts/GoodVibesPro.eot');
     src: local('Good Vibes Pro'), local('GoodVibesPro'),
-        url('/fonts/GoodVibesPro.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/GoodVibesPro.woff2') format('woff2'),
-        url('/fonts/GoodVibesPro.woff') format('woff'),
-        url('/fonts/GoodVibesPro.ttf') format('truetype');
+        url('../fonts/GoodVibesPro.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GoodVibesPro.woff2') format('woff2'),
+        url('../fonts/GoodVibesPro.woff') format('woff'),
+        url('../fonts/GoodVibesPro.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -4305,4 +4305,5 @@ header {
     .wine-params span {
         display: block;
     }
+
 }
