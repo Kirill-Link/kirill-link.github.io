@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="single__page">
+    <header>
+        <div class="container">
+            <div class="header__container header__container-home navigation">
+                <div class="header__items">
+                    <a class="header__logo" href="index.html"><img src="images/logo/Group 148.png"></a>
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item"><a href="index.html">Главная</a></li>
+                            <li class="header__nav-item"><a href="sets.html" class="active">Сеты</a></li>
+                            <li class="header__nav-item"><a href="subscribe.html">Подписка</a></li>
+                            <li class="header__nav-item"><a href="serteficats.html">Сертификат</a></li>
+                            <li class="header__nav-item"><a href="business.html">Бизнесу</a></li>
+                            <li class="header__nav-item"><a href="about.html" class="active">О нас</a></li>
+                            <li class="header__nav-item"><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="mobile__burger__menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="container-fluid">
+            <div class="set__title">Сеты <span>Wine Cases</span></div>
+
+            <div class="set__info__line">
+                <div class="set__info__searchall">Найдено товаров: <span>103</span></div>
+                <div class="set__info__sort_items">
+                    <div class="set__info__sort_item">Сортировать по: </div>
+                    <span class="set__info__sort_btn">популярности <img src="images/set/1.svg"></span>
+                    <span class="set__info__filtre_btn"><img src="images/set/2.svg"> Фильтр <span>(0)</span></span>
+                </div>
+            </div>
+
+            <div class="catalog">
+                <div class="catalog__filters">
+                    <div class="catalog__filters_header">
+                        <div class="catalog__filters_name">Фильтр <span>(0)</span></div>
+                        <a href="#" class="catalog__filters_name_clear_link">Очистить все</a>
+                    </div>
+
+
+                    <h2 class="catalog__filters_name_type">Категории</h2>
+                    <div class="catalog__filters_block">
+                        <div class="catalog__filters_block_name"></div>
+                        <div class="filter-grid">
+                            <div class="filter-item">
+                                <input type="checkbox" id="price" class="filter-input" name="filter">
+                                <label for="price" class="filter-label">До 6000</label>
+                            </div>
+
+                            <div class="filter-item">
+                                <input type="checkbox" id="discount" class="filter-input" name="filter">
+                                <label for="discount" class="filter-label">Со скидкой</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="gifts" class="filter-input" name="filter">
+                                <label for="gifts" class="filter-label">Подарки и аксессуары</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="showcase" class="filter-input" name="filter">
+                                <label for="showcase" class="filter-label">Для дивишника</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="showcase2" class="filter-input" name="filter">
+                                <label for="showcase2" class="filter-label">Еще прикольные категории</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h2 class="catalog__filters_name_type">Вкус</h2>
+                    <div class="catalog__filters_block">
+                        <div class="catalog__filters_block_name"></div>
+                        <div class="filter-grid">
+                            <div class="filter-item">
+                                <input type="checkbox" id="strong" class="filter-input" name="filter">
+                                <label for="strong" class="filter-label">Крепкое</label>
+                            </div>
+
+                            <div class="filter-item">
+                                <input type="checkbox" id="red" class="filter-input" name="filter">
+                                <label for="red" class="filter-label">Красное</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="white" class="filter-input" name="filter">
+                                <label for="white" class="filter-label">Белое</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="pink" class="filter-input" name="filter">
+                                <label for="pink" class="filter-label">Розовое</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="dry" class="filter-input" name="filter">
+                                <label for="dry" class="filter-label">Сухое</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="dessert" class="filter-input" name="filter">
+                                <label for="dessert" class="filter-label">Сладкое</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="semi-dry" class="filter-input" name="filter">
+                                <label for="semi-dry" class="filter-label">Полусухое</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="semi-sweet" class="filter-input" name="filter">
+                                <label for="semi-sweet" class="filter-label">Полусладкое</label>
+                            </div>
+
+                            <div class="filter-item filter-item-full">
+                                <input type="checkbox" id="sparkling-wine" class="filter-input" name="filter">
+                                <label for="sparkling-wine" class="filter-label">Игристое</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h2 class="catalog__filters_name_type">Цена ($)</h2>
+
+                    <div class="inputs-row">
+                        <div class="input-group">
+                            <span class="input-label">от</span>
+                            <input type="number" class="price-input" id="minInput" value="100" min="0" max="3000">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-label">до</span>
+                            <input type="number" class="price-input" id="maxInput" value="2000" min="0" max="3000">
+                        </div>
+                    </div>
+
+                    <div class="values-row">
+                        <span class="value-label" id="minValue">$100</span>
+                        <span class="value-label" id="maxValue">$2000</span>
+                    </div>
+
+                    <div class="slider-container">
+                        <div class="range-track">
+                            <div class="range-fill" id="rangeFill"></div>
+                        </div>
+                        <div class="range-inputs">
+                            <input type="range" class="range-input" id="rangeMin" min="0" max="3000" value="100"
+                                step="10">
+                            <input type="range" class="range-input" id="rangeMax" min="0" max="3000" value="2000"
+                                step="10">
+                        </div>
+                    </div>
+
+                    <div class="min-max-labels">
+                        <span>$0</span>
+                        <span>$3000+</span>
+                    </div>
+
+                    <div class="mobile__btns">
+                        <a href="#" class="mobile__btn">Очистить все</a>
+                        <a href="#" class="mobile__btn mobile__btn-bg">Применить</a>
+                    </div>
+
+                </div>
+
+                <div class="catalog__products">
+                    <a class="set__item" href="sets_inner.html">
+                        <div class="set__item__image"><img src="images/sets/1.png"></div>
+                        <div class="set__item__title">Ящик цветочного пино гриджио</div>
+                        <div class="set__item__type">белое сухое</div>
+                        <div class="set__item__price">6&nbsp;300&nbsp;₽</div>
+                        <span class="set__item__link">Заказать</span>
+                    </a>
+                    <a class="set__item" href="sets_inner.html">
+                        <div class="set__item__image"><img src="images/sets/1.png"></div>
+                        <div class="set__item__title">Ящик цветочного пино гриджио</div>
+                        <div class="set__item__type">белое сухое</div>
+                        <div class="set__item__price">6&nbsp;300&nbsp;₽</div>
+                        <span class="set__item__link">Заказать</span>
+                    </a>
+                    <a class="set__item" href="sets_inner.html">
+                        <div class="set__item__image"><img src="images/sets/1.png"></div>
+                        <div class="set__item__title">Ящик цветочного пино гриджио</div>
+                        <div class="set__item__type">белое сухое</div>
+                        <div class="set__item__price">6&nbsp;300&nbsp;₽</div>
+                        <span class="set__item__link">Заказать</span>
+                    </a>
+
+                    <a class="set__item" href="sets_inner.html">
+                        <div class="set__item__image"><img src="images/sets/1.png"></div>
+                        <div class="set__item__title">Ящик цветочного пино гриджио</div>
+                        <div class="set__item__type">белое сухое</div>
+                        <div class="set__item__price">6&nbsp;300&nbsp;₽</div>
+                        <span class="set__item__link">Заказать</span>
+                    </a>
+
+                    <a class="set__item" href="sets_inner.html">
+                        <div class="set__item__image"><img src="images/sets/1.png"></div>
+                        <div class="set__item__title">Ящик цветочного пино гриджио</div>
+                        <div class="set__item__type">белое сухое</div>
+                        <div class="set__item__price">6&nbsp;300&nbsp;₽</div>
+                        <span class="set__item__link">Заказать</span>
+                    </a>
+
+                    <a class="set__item" href="sets_inner.html">
+                        <div class="set__item__image"><img src="images/sets/1.png"></div>
+                        <div class="set__item__title">Ящик цветочного пино гриджио</div>
+                        <div class="set__item__type">белое сухое</div>
+                        <div class="set__item__price">6&nbsp;300&nbsp;₽</div>
+                        <span class="set__item__link">Заказать</span>
+                    </a>
+
+                    <a class="set__item" href="sets_inner.html">
+                        <div class="set__item__image"><img src="images/sets/1.png"></div>
+                        <div class="set__item__title">Ящик цветочного пино гриджио</div>
+                        <div class="set__item__type">белое сухое</div>
+                        <div class="set__item__price">6&nbsp;300&nbsp;₽</div>
+                        <span class="set__item__link">Заказать</span>
+                    </a>
+
+                    <a class="set__item" href="sets_inner.html">
+                        <div class="set__item__image"><img src="images/sets/1.png"></div>
+                        <div class="set__item__title">Ящик цветочного пино гриджио</div>
+                        <div class="set__item__type">белое сухое</div>
+                        <div class="set__item__price">6&nbsp;300&nbsp;₽</div>
+                        <span class="set__item__link">Заказать</span>
+                    </a>
+
+                    <a class="set__item" href="sets_inner.html">
+                        <div class="set__item__image"><img src="images/sets/1.png"></div>
+                        <div class="set__item__title">Ящик цветочного пино гриджио</div>
+                        <div class="set__item__type">белое сухое</div>
+                        <div class="set__item__price">6&nbsp;300&nbsp;₽</div>
+                        <span class="set__item__link">Заказать</span>
+                    </a>
+
+                </div>
+
+                <div class="sort">
+                    <div class="sort-container">
+                        <div class="header">
+                            <h2 class="title">Сортировка</h2>
+                            <button class="close-btn" aria-label="Закрыть"></button>
+                        </div>
+
+                        <div class="sort-options">
+                            <div class="sort-option">
+                                <input type="radio" id="popular" name="sort" class="radio-input" checked>
+                                <label for="popular" class="sort-label">
+                                    <div class="radio-custom"></div>
+                                    <span class="sort-text">По популярности</span>
+                                </label>
+                            </div>
+
+                            <div class="sort-option">
+                                <input type="radio" id="newest" name="sort" class="radio-input">
+                                <label for="newest" class="sort-label">
+                                    <div class="radio-custom"></div>
+                                    <span class="sort-text">По новизне</span>
+                                </label>
+                            </div>
+
+                            <div class="sort-option">
+                                <input type="radio" id="cheap" name="sort" class="radio-input">
+                                <label for="cheap" class="sort-label">
+                                    <div class="radio-custom"></div>
+                                    <span class="sort-text">Сначала дешевые</span>
+                                </label>
+                            </div>
+
+                            <div class="sort-option">
+                                <input type="radio" id="expensive" name="sort" class="radio-input">
+                                <label for="expensive" class="sort-label">
+                                    <div class="radio-custom"></div>
+                                    <span class="sort-text">Сначала дорогие</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="sort-yes">Применить</a>
+                </div>
+            </div>
+
+
+
+            <div class="catalog__footer">
+                <div class="catalog__footer__link catalog__footer__prev"><img src="images/set/3.svg">Предыдущая</div>
+                <div class="catalog__footer__paginations">
+                    <a class="catalog__footer__paginations-active" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">....</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                </div>
+                <div class="catalog__footer__link catalog__footer__next">Дальше<img src="images/set/4.svg"></div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__items">
+                <div class="footer__item">
+                    <div class="footer__logo"><img src="images/footer/1.png"></div>
+                    <div class="footer__copyright">WineCas.es © Vintage 2025</div>
+                    <div class="footer__warn">ЧРЕЗМЕРНОЕ УПОТРЕБЛЕНИЕ АЛКОГОЛЯ ВРЕДИТ ВАШЕМУ ЗДОРОВЬЮ.Ресурс является
+                        информационным, упоминаемую продукцию можно зарезервировать или приобрести только в винотеке.
+                        Информация предназначена для ознакомительных целей и не является публичной офертой. Содержание
+                        сайта предназначено для лиц старше 18 лет. Мы работаем в строгом соответствии с
+                        законодательством РФ. Правила обработки данных</div>
+                </div>
+
+                <div class="footer__item">
+                    <div class="footer__contact">Юридический адрес: <span>Тверская 9а стр.6</span></div>
+                    <div class="footer__contact">Время работы: <span> пн-вс 10:00 — 21:00</span></div>
+
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social">Телеграмм</a>
+                        <a href="#" class="footer__social">Фейсбук</a>
+                        <a href="#" class="footer__social">Инстаграмм</a>
+                    </div>
+                </div>
+
+                <div class="footer__item">
+                    <form class="footer__form">
+                        <div class="footer__form__title">
+                            Первым получай <br> специальные предложения <span>и лайфхаки про вино</span>
+                        </div>
+
+                        <input type="email" class="footer__form-input" placeholder="Введите ваш e-mail">
+
+                        <button class="subscribe__btn-footer">Подписаться</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
