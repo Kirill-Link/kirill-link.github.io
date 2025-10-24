@@ -11,6 +11,7 @@
 }
 
 
+
 html,
 body {
     margin: 0;
@@ -3150,6 +3151,7 @@ header {
     margin-bottom: 32px;
 }
 
+
 .filter-grid {
     display: flex;
     flex-wrap: wrap;
@@ -3497,18 +3499,6 @@ header {
     border-radius: 10px;
     color: #F0ECE4 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .sort {
     position: fixed;
@@ -4061,8 +4051,11 @@ header {
     }
 }
 
-
-
+@media (max-width: 421px) {
+    .catalog__filters_block {
+        margin-bottom: 20px;
+    }
+}   
 
 
 
@@ -4305,5 +4298,4 @@ header {
     .wine-params span {
         display: block;
     }
-
 }
